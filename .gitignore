@@ -1,0 +1,55 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Build output
+dist
+dist-ssr
+*.local
+
+# Large reference assets not needed in production repo
+Template.pdf
+template_page1_hd.png
+*.docx
+
+# Environment and editor files
+.env
+.env.*
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary conversion / analysis scripts
+inspect_text.cjs
+render_pages.cjs
+render_page1.cjs
+patch_cover*.cjs
+prepare_cover.cjs
+convert_webp.cjs
+page1_text_info.json
+
+# Root duplicate assets (actual assets are in public/assets)
+/*.jpg
+/*.png
+/Ảnh.jpg
+/overview layout.jpg
+
+# Unused heavy uncompressed source images
+public/assets/cover_base.png
+public/assets/cover_clean.png
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Antigravity agent files
+.agents
