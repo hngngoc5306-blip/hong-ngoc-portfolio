@@ -9,10 +9,12 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import EditorialBridge from './components/EditorialBridge';
 import ScrapbookMusicPlayer from './components/ScrapbookMusicPlayer';
+import { useScrollEntrance } from './hooks/useScrollEntrance';
 import { content } from './data/content';
 
 export default function App() {
   const currentContent = content;
+  useScrollEntrance();
 
   const handleScrollToOverview = () => {
     const el = document.getElementById('overview');

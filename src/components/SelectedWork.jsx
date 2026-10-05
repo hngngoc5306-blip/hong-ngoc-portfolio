@@ -25,9 +25,9 @@ export default function SelectedWork({ content }) {
       <div className="relative z-10 max-w-7xl mx-auto">
         
         {/* Editorial Section Masthead */}
-        <div className="flex items-center justify-between gap-4 mb-16 border-b-2 border-earth-900 pb-4">
+        <div data-reveal="heading" className="flex items-center justify-between gap-4 mb-16 border-b-2 border-earth-900 pb-4">
           <div className="flex items-center gap-4">
-            <span className="font-mono text-xs sm:text-sm uppercase tracking-widest text-earth-900 font-black bg-[#FF007F] text-white px-4 py-1.5 shadow-[3px_3px_0_rgba(42,24,21,0.2)]">
+            <span className="scrapbook-interactive-stamp font-mono text-xs sm:text-sm uppercase tracking-widest text-earth-900 font-black bg-[#FF007F] text-white px-4 py-1.5 shadow-[3px_3px_0_rgba(42,24,21,0.2)]">
               {w.sectionNumber} — {w.sectionTitle}
             </span>
             <span className="text-earth-800 font-mono text-xs sm:text-sm hidden sm:inline-block font-bold">
@@ -50,11 +50,11 @@ export default function SelectedWork({ content }) {
           Not an isolated card, but a layered studio drafting board with pinned artifacts,
           hero specimen screen, drafting blueprint, and uneven overlapping contact sheets.
         */}
-        <div className="relative bg-white border-3 border-earth-900 shadow-[16px_16px_0_rgba(42,24,21,0.28)] p-6 sm:p-10 lg:p-14 mb-16">
+        <div data-reveal="paper" className="delay-150 relative bg-white border-3 border-earth-900 shadow-[16px_16px_0_rgba(42,24,21,0.28)] p-6 sm:p-10 lg:p-14 mb-16">
           
           {/* Blue Checkered Washi Tape on top left corner */}
           <div 
-            className="absolute -top-5 left-12 w-36 h-8 z-20 hidden sm:block rotate-1 shadow-xs"
+            className="scrapbook-interactive-tape absolute -top-5 left-12 w-36 h-8 z-20 hidden sm:block rotate-1 shadow-xs"
             style={{
               backgroundColor: '#DCE8F2',
               backgroundImage: 'repeating-linear-gradient(0deg, rgba(70,130,180,0.3) 0px, rgba(70,130,180,0.3) 6px, transparent 6px, transparent 12px), repeating-linear-gradient(90deg, rgba(70,130,180,0.3) 0px, rgba(70,130,180,0.3) 6px, transparent 6px, transparent 12px)',
@@ -63,7 +63,7 @@ export default function SelectedWork({ content }) {
           />
 
           {/* Yellow Post-it Note with Binder Clip (Studio Wall Annotation) */}
-          <div className="absolute -top-10 right-6 sm:right-16 w-56 sm:w-64 template-sticky-yellow p-4.5 transform rotate-2 z-20 hidden md:block shadow-md">
+          <div className="scrapbook-interactive-tape absolute -top-10 right-6 sm:right-16 w-56 sm:w-64 template-sticky-yellow p-4.5 transform rotate-2 z-20 hidden md:block shadow-md">
             <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-10 h-10 pointer-events-none">
               <img src="/assets/collage_elem_40.png" alt="Clip" className="w-full h-full object-contain filter drop-shadow-xs" />
             </div>

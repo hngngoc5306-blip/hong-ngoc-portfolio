@@ -46,9 +46,9 @@ export default function Contact({ content }) {
       <div className="relative z-10 max-w-6xl mx-auto">
         
         {/* Editorial Section Masthead */}
-        <div className="flex items-center justify-between gap-4 mb-10 pb-3 border-b border-earth-900/30">
+        <div data-reveal="heading" className="flex items-center justify-between gap-4 mb-10 pb-3 border-b border-earth-900/30">
           <div className="flex items-center gap-3">
-            <span className="font-mono text-xs uppercase tracking-widest text-earth-900 font-bold bg-[#FAF6F0] px-3.5 py-1.5 border-2 border-earth-900 shadow-[2px_2px_0_rgba(42,24,21,0.2)]">
+            <span className="scrapbook-interactive-stamp font-mono text-xs uppercase tracking-widest text-earth-900 font-bold bg-[#FAF6F0] px-3.5 py-1.5 border-2 border-earth-900 shadow-[2px_2px_0_rgba(42,24,21,0.2)]">
               {ct.sectionNumber} — {ct.sectionTitle}
             </span>
             <span className="text-white drop-shadow-xs font-mono text-xs hidden sm:inline-block font-bold">
@@ -74,7 +74,7 @@ export default function Contact({ content }) {
         {/* RIGHT PAGE: Cyan Starburst, Script "Contact Me", 4 Rounded Color Pills,  */}
         {/*             Yellow Starburst, Blue Gingham Tape                          */}
         {/* ========================================================================= */}
-        <div className="relative">
+        <div data-reveal="paper" className="delay-150 relative">
           
           {/* Torn letter paper texture peeking out from the left edge (Template Page 9 echo) */}
           <div 
@@ -125,14 +125,14 @@ export default function Contact({ content }) {
                 </div>
 
                 {/* Polaroid Photo Frame: Containing EXACTLY AND ONLY Image 17 */}
-                <div className="my-auto py-2 flex flex-col items-center relative">
+                <div data-reveal="photo" className="delay-200 my-auto py-2 flex flex-col items-center relative">
                   
                   {/* Polaroid Frame */}
-                  <div className="relative w-full max-w-[280px] sm:max-w-[320px] bg-white p-3 sm:p-3.5 pb-9 sm:pb-11 border-2 border-earth-900 shadow-[10px_10px_0_rgba(42,24,21,0.18)] transform -rotate-2 hover:rotate-0 transition-transform duration-300 group">
+                  <div className="relative w-full max-w-[280px] sm:max-w-[320px] bg-white p-3 sm:p-3.5 pb-9 sm:pb-11 border-2 border-earth-900 shadow-[10px_10px_0_rgba(42,24,21,0.18)] transform -rotate-2 hover:rotate-0 hover:-translate-y-2 hover:shadow-[14px_14px_0_rgba(42,24,21,0.24)] transition-all duration-500 cursor-pointer group">
                     
                     {/* Semi-translucent Beige Washi Tape crossing the top-left corner */}
                     <div 
-                      className="absolute -top-3.5 -left-4 w-28 sm:w-32 h-7 bg-[#EFE8D6]/90 backdrop-blur-xs border-y border-earth-400/60 shadow-2xs transform -rotate-12 pointer-events-none z-10"
+                      className="scrapbook-interactive-tape absolute -top-3.5 -left-4 w-28 sm:w-32 h-7 bg-[#EFE8D6]/90 backdrop-blur-xs border-y border-earth-400/60 shadow-2xs transform -rotate-12 pointer-events-none z-10"
                     />
 
                     {/* Image 17: Natural sunlight portrait */}
@@ -140,7 +140,7 @@ export default function Contact({ content }) {
                       <img 
                         src="/assets/17.jpg" 
                         alt="Nguyen Nhu Hong Ngoc" 
-                        className="w-full h-full object-cover object-top group-hover:scale-102 transition-transform duration-500" 
+                        className="w-full h-full object-cover object-top group-hover:scale-104 transition-transform duration-700 ease-out" 
                       />
                     </div>
 

@@ -26,9 +26,9 @@ export default function Research({ content }) {
       <div className="relative z-10 max-w-7xl mx-auto">
         
         {/* Editorial Section Masthead */}
-        <div className="flex items-center justify-between gap-4 mb-16 border-b-2 border-earth-900 pb-4">
+        <div data-reveal="heading" className="flex items-center justify-between gap-4 mb-16 border-b-2 border-earth-900 pb-4">
           <div className="flex items-center gap-4">
-            <span className="font-mono text-xs sm:text-sm uppercase tracking-widest text-earth-900 font-black bg-[#EBBEC3] px-4 py-1.5 border-2 border-earth-900 shadow-[3px_3px_0_rgba(42,24,21,0.2)]">
+            <span className="scrapbook-interactive-stamp font-mono text-xs sm:text-sm uppercase tracking-widest text-earth-900 font-black bg-[#EBBEC3] px-4 py-1.5 border-2 border-earth-900 shadow-[3px_3px_0_rgba(42,24,21,0.2)]">
               {r.sectionNumber} — {r.sectionTitle}
             </span>
             <span className="text-earth-700 font-mono text-xs sm:text-sm hidden sm:inline-block font-bold">
@@ -50,7 +50,7 @@ export default function Research({ content }) {
           OVERSIZED TYPOGRAPHIC STATEMENT:
           RESEARCH / QUESTIONS / METHODS / EVIDENCE
         */}
-        <div className="mb-14 pb-10 border-b-2 border-earth-900/20">
+        <div data-reveal="text" className="delay-100 mb-14 pb-10 border-b-2 border-earth-900/20">
           <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 font-editorial-serif font-black text-3xl sm:text-5xl lg:text-6xl text-earth-900 uppercase tracking-tight">
             <span>RESEARCH</span>
             <span className="text-rosewood-600 font-sans font-light">/</span>

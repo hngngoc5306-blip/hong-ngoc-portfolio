@@ -29,9 +29,9 @@ export default function Experience({ content }) {
       <div className="relative z-10 max-w-7xl mx-auto">
         
         {/* Editorial Section Masthead */}
-        <div className="flex items-center justify-between gap-4 mb-16 border-b-2 border-earth-900 pb-4">
+        <div data-reveal="heading" className="flex items-center justify-between gap-4 mb-16 border-b-2 border-earth-900 pb-4">
           <div className="flex items-center gap-4">
-            <span className="font-mono text-xs sm:text-sm uppercase tracking-widest text-earth-900 font-black bg-[#FF007F] text-white px-4 py-1.5 shadow-[3px_3px_0_rgba(42,24,21,0.2)]">
+            <span className="scrapbook-interactive-stamp font-mono text-xs sm:text-sm uppercase tracking-widest text-earth-900 font-black bg-[#FF007F] text-white px-4 py-1.5 shadow-[3px_3px_0_rgba(42,24,21,0.2)]">
               {exp.sectionNumber} — {exp.sectionTitle}
             </span>
             <span className="text-earth-800 font-mono text-xs sm:text-sm hidden sm:inline-block font-bold">
@@ -53,9 +53,9 @@ export default function Experience({ content }) {
           OVERVIEW SPREAD:
           Master Event Production Archive Banner with 3 Stacked Archival Color Memos
         */}
-        <div className="relative mb-20 p-6 sm:p-10 lg:p-12 bg-white border-3 border-earth-900 shadow-[14px_14px_0_rgba(42,24,21,0.28)]">
-          {/* Dispatch seal on top right */}
-          <div className="absolute -top-6 -right-4 w-16 sm:w-20 opacity-85 pointer-events-none rotate-6 z-20 animate-cover-star">
+        <div data-reveal="paper" className="delay-150 relative mb-20 p-6 sm:p-10 lg:p-12 bg-white border-3 border-earth-900 shadow-[14px_14px_0_rgba(42,24,21,0.28)]">
+          {/* Dispatch seal on top right with interactive touch */}
+          <div className="scrapbook-interactive-stamp absolute -top-6 -right-4 w-16 sm:w-20 opacity-85 pointer-events-auto rotate-6 z-20 animate-cover-star" title="Dispatch seal">
             <img src="/assets/collage_elem_30.png" alt="Dispatch seal" className="w-full h-full object-contain filter drop-shadow-xs" />
           </div>
 

@@ -26,23 +26,32 @@ export default function Overview({ content }) {
         <img src="/assets/collage_elem_34.png" alt="Tulips motif" className="w-full h-full object-contain" />
       </div>
 
-      {/* Decorative yellow star top left */}
-      <div className="absolute top-12 left-10 text-yellow-300 z-20 hidden lg:block opacity-90 animate-pulse-glow">
+      {/* Decorative yellow star top left with interactive wobble easter egg */}
+      <div className="scrapbook-interactive-star absolute top-12 left-10 text-yellow-300 z-20 hidden lg:block opacity-90 animate-pulse-glow" title="Touch the star!">
         <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 0L14.6 8.4L23.4 8.4L16.3 13.6L19 22L12 16.8L5 22L7.7 13.6L0.6 8.4L9.4 8.4L12 0Z"/>
         </svg>
       </div>
 
-      {/* Large Notebook Paper Spread (As seen in Template.pdf Page 2 & 3) */}
-      <div className="relative z-10 max-w-7xl mx-auto bg-[#FAF6F0] p-6 sm:p-10 lg:p-14 border-2 border-earth-900 shadow-[10px_10px_0_rgba(42,24,21,0.25)]">
+      {/* Large Notebook Paper Spread with entrance assembly animation */}
+      <div 
+        data-reveal="paper"
+        className="relative z-10 max-w-7xl mx-auto bg-[#FAF6F0] p-6 sm:p-10 lg:p-14 border-2 border-earth-900 shadow-[10px_10px_0_rgba(42,24,21,0.25)]"
+      >
         
         {/* Binder clip at top center pinning the entire page */}
-        <div className="absolute -top-7 left-1/2 -translate-x-1/2 w-14 sm:w-16 h-14 z-30 pointer-events-none">
+        <div 
+          data-reveal="sticker"
+          className="delay-150 absolute -top-7 left-1/2 -translate-x-1/2 w-14 sm:w-16 h-14 z-30 pointer-events-none"
+        >
           <img src="/assets/collage_elem_40.png" alt="Binder clip" className="w-full h-full object-contain" />
         </div>
 
         {/* Editorial Section Masthead */}
-        <div className="relative mb-12 border-b-2 border-earth-900/80 pb-4">
+        <div 
+          data-reveal="heading"
+          className="delay-100 relative mb-12 border-b-2 border-earth-900/80 pb-4"
+        >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <span className="template-banner-pink text-xs uppercase tracking-widest font-mono">
@@ -71,15 +80,15 @@ export default function Overview({ content }) {
           <div className="lg:col-span-4 xl:col-span-3 space-y-7">
             
             {/* Retro rectangular framed photo with tape & doodles matching Template.pdf */}
-            <div className="relative mx-auto max-w-[280px] sm:max-w-[310px]">
+            <div data-reveal="photo" className="relative mx-auto max-w-[280px] sm:max-w-[310px]">
               
               {/* Washi tape pinning top of frame */}
-              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-28 h-6 z-30 opacity-80 pointer-events-none -rotate-1">
+              <div className="scrapbook-interactive-tape absolute -top-3.5 left-1/2 -translate-x-1/2 w-28 h-6 z-30 opacity-80 pointer-events-none -rotate-1">
                 <img src="/assets/collage_elem_39.png" alt="Washi tape" className="w-full h-full object-contain" />
               </div>
 
               {/* Hand-drawn star doodle top right */}
-              <div className="absolute -top-5 -right-3 text-accent-terracotta z-20 animate-pulse-glow">
+              <div className="scrapbook-interactive-star absolute -top-5 -right-3 text-accent-terracotta z-20 animate-pulse-glow" title="Touch the star!">
                 <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 0L14.6 8.4L23.4 8.4L16.3 13.6L19 22L12 16.8L5 22L7.7 13.6L0.6 8.4L9.4 8.4L12 0Z"/>
                 </svg>
@@ -113,7 +122,7 @@ export default function Overview({ content }) {
             </div>
 
             {/* Quote Block — Open editorial styling with vertical rule */}
-            <div className="pt-2">
+            <div data-reveal="text" className="delay-150 pt-2">
               <div className="border-l-3 border-earth-900 pl-4 py-1.5">
                 <p className="font-editorial-serif italic text-earth-900 text-base sm:text-lg lg:text-[1.15rem] leading-relaxed font-medium">
                   “{o.quote}”
@@ -197,7 +206,7 @@ export default function Overview({ content }) {
           <div className="lg:col-span-5 xl:col-span-6 space-y-8">
             
             {/* Identity & Short Bio with Muted Pink Highlighter */}
-            <div>
+            <div data-reveal="heading" className="delay-100">
               <div className="inline-block">
                 <h2 className="font-editorial-serif text-3xl sm:text-4xl lg:text-[2.6rem] font-black text-earth-900 tracking-tight leading-[1.15] pink-marker">
                   <span>I’m Nguyen Nhu</span>
@@ -208,13 +217,13 @@ export default function Overview({ content }) {
               <p className="text-rosewood-600 font-bold text-lg sm:text-xl lg:text-[1.5rem] mt-3 font-mono tracking-wide leading-snug">
                 {o.role}
               </p>
-              <p className="text-earth-800 text-base sm:text-lg lg:text-[1.15rem] leading-relaxed mt-5 font-sans text-justify">
+              <p data-reveal="text" className="delay-200 text-earth-800 text-base sm:text-lg lg:text-[1.15rem] leading-relaxed mt-5 font-sans text-justify">
                 {o.intro}
               </p>
             </div>
 
             {/* Main Content Columns: [Expertise] & [Tools -> Language -> Soft Skills] */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-7 pt-5 border-t border-earth-300 items-start">
+            <div data-reveal="paper" className="delay-200 grid grid-cols-1 sm:grid-cols-2 gap-7 pt-5 border-t border-earth-300 items-start">
               
               {/* SUB-COLUMN A: EXPERTISE */}
               <div className="space-y-7">
@@ -325,7 +334,7 @@ export default function Overview({ content }) {
           <div className="lg:col-span-3 xl:col-span-3 space-y-7">
             
             {/* Experience Open Ledger */}
-            <div className="border-2 border-earth-900 bg-white p-5 sm:p-6 shadow-[5px_5px_0_rgba(42,24,21,0.15)]">
+            <div data-reveal="paper" className="delay-200 border-2 border-earth-900 bg-white p-5 sm:p-6 shadow-[5px_5px_0_rgba(42,24,21,0.15)] hover-editorial-lift">
               <div className="flex justify-between items-center mb-4 pb-2 border-b-2 border-earth-900">
                 <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 uppercase tracking-wider">
                   {o.experienceTitle}
@@ -360,7 +369,7 @@ export default function Overview({ content }) {
             </div>
 
             {/* Education Open Ledger: DIRECTLY BELOW EXPERIENCE IN COLUMN 3 */}
-            <div className="border-2 border-earth-900 bg-white p-5 sm:p-6 shadow-[5px_5px_0_rgba(42,24,21,0.15)]">
+            <div data-reveal="paper" className="delay-300 border-2 border-earth-900 bg-white p-5 sm:p-6 shadow-[5px_5px_0_rgba(42,24,21,0.15)] hover-editorial-lift">
               <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 uppercase tracking-wider mb-4 pb-2 border-b-2 border-earth-900">
                 {o.educationTitle}
               </h3>
