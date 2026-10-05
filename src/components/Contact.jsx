@@ -290,9 +290,6 @@ export default function Contact({ content }) {
           {/* Closing Editorial Folio Signoff */}
           <div className="mt-8 flex items-center justify-between text-xs font-mono text-white/90 drop-shadow-xs px-2">
             <span className="font-bold">Nguyen Nhu Hong Ngoc · Portfolio 2024–2028</span>
-            <span className="font-editorial-script text-xl text-white font-bold hidden sm:inline">
-              ~ the conversation begins ~
-            </span>
             <span className="font-bold">VOL. 01 // COMPLETE</span>
           </div>
 
