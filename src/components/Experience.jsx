@@ -215,12 +215,17 @@ export default function Experience({ content }) {
                       </div>
                     </div>
 
-                    {/* Secondary Supporting Photograph — Positioned lower and slightly behind, Tilted Right (+3 deg) */}
+                    {/* Secondary Supporting Photograph (Backstage Log) — Enlarged & Harmoniously Composed */}
                     <div 
                       data-reveal="photo"
-                      className="delay-250 relative -mt-8 ml-auto w-36 sm:w-44 bg-white p-2 pb-5 border-2 border-earth-900 shadow-[5px_5px_0_rgba(42,24,21,0.15)] transform rotate-3 hover:rotate-0 transition-transform duration-300 cursor-pointer z-20 group"
+                      className="delay-250 relative -mt-6 sm:-mt-8 ml-auto w-48 sm:w-56 bg-white p-2.5 pb-6 border-2 border-earth-900 shadow-[7px_7px_0_rgba(42,24,21,0.18)] transform rotate-2 hover:rotate-0 hover:-translate-y-1 transition-all duration-300 cursor-pointer z-20 group"
                       onClick={() => setSelectedPhoto({ src: `/assets/${tatakeEvent.images[1]}`, title: `${tatakeEvent.title} — Backstage Operations & Team` })}
                     >
+                      {/* Translucent washi tape on top of backstage photo */}
+                      <div data-reveal="sticker" className="delay-300 absolute -top-3 right-6 w-24 h-5 opacity-85 pointer-events-none -rotate-2">
+                        <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
+                      </div>
+
                       <div className="aspect-[4/3] bg-earth-950 overflow-hidden border border-earth-300">
                         <img 
                           src={`/assets/${tatakeEvent.images[1]}`} 
@@ -228,8 +233,13 @@ export default function Experience({ content }) {
                           className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500" 
                         />
                       </div>
-                      <div className="text-[10px] font-mono text-earth-800 text-center pt-1 font-bold">
-                        Backstage log ↗
+                      <div className="pt-1.5 px-1 flex items-center justify-between border-t border-earth-200 mt-1">
+                        <span className="font-editorial-script text-earth-900 text-sm font-bold">
+                          Backstage log
+                        </span>
+                        <span className="text-[10px] font-mono text-earth-600 font-bold group-hover:text-rosewood-600 transition-colors">
+                          Inspect ↗
+                        </span>
                       </div>
                     </div>
 
@@ -706,12 +716,17 @@ export default function Experience({ content }) {
                       </div>
                     </div>
 
-                    {/* Secondary Supporting Photograph — Positioned lower and offset to the left, Tilted Left (-3 deg) */}
+                    {/* Secondary Supporting Photograph (Backstage Log) — Enlarged & Harmoniously Composed */}
                     <div 
                       data-reveal="photo"
-                      className="delay-250 relative -mt-8 mr-auto w-36 sm:w-44 bg-white p-2 pb-5 border-2 border-earth-900 shadow-[5px_5px_0_rgba(42,24,21,0.15)] transform -rotate-3 hover:rotate-0 transition-transform duration-300 cursor-pointer z-20 group"
+                      className="delay-250 relative -mt-6 sm:-mt-8 mr-auto w-48 sm:w-56 bg-white p-2.5 pb-6 border-2 border-earth-900 shadow-[7px_7px_0_rgba(42,24,21,0.18)] transform -rotate-2 hover:rotate-0 hover:-translate-y-1 transition-all duration-300 cursor-pointer z-20 group"
                       onClick={() => setSelectedPhoto({ src: `/assets/${toTheLineEvent.images[1]}`, title: `${toTheLineEvent.title} — Backstage Operations & Artists` })}
                     >
+                      {/* Translucent washi tape on top of backstage photo */}
+                      <div data-reveal="sticker" className="delay-300 absolute -top-3 left-6 w-24 h-5 opacity-85 pointer-events-none rotate-2">
+                        <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
+                      </div>
+
                       <div className="aspect-[4/3] bg-earth-950 overflow-hidden border border-earth-300">
                         <img 
                           src={`/assets/${toTheLineEvent.images[1]}`} 
@@ -719,8 +734,13 @@ export default function Experience({ content }) {
                           className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500" 
                         />
                       </div>
-                      <div className="text-[10px] font-mono text-earth-800 text-center pt-1 font-bold">
-                        Backstage log ↗
+                      <div className="pt-1.5 px-1 flex items-center justify-between border-t border-earth-200 mt-1">
+                        <span className="font-editorial-script text-earth-900 text-sm font-bold">
+                          Backstage log
+                        </span>
+                        <span className="text-[10px] font-mono text-earth-600 font-bold group-hover:text-rosewood-600 transition-colors">
+                          Inspect ↗
+                        </span>
                       </div>
                     </div>
 
