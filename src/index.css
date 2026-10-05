@@ -8,6 +8,13 @@
     color: #2A1815;
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   }
+
+  /* Hide default cursor on desktop to show only the cute star cursor */
+  @media (pointer: fine) {
+    *, html, body, a, button, input, [role="button"], .cursor-pointer {
+      cursor: none !important;
+    }
+  }
 }
 
 /* Subtle editorial paper grain texture */
