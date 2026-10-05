@@ -293,8 +293,8 @@ export default function Experience({ content }) {
                 {/* ------------------------------------------------------------- */}
                 <div className="flex-1 p-6 sm:p-8 lg:p-10 xl:p-12 notebook-ruled space-y-7 flex flex-col justify-between bg-[#FAF6F0] relative overflow-hidden lg:pl-10">
                   
-                  {/* Delicate Pink Petals falling across bottom half of notebook sheet */}
-                  <FallingPetals count={4} className="opacity-80 z-0" />
+                  {/* Delicate Pink Petals & Fresh Green Leaves falling across notebook sheet */}
+                  <FallingPetals count={7} className="opacity-95 z-0" />
 
                   {/* Decorative Concert Ribbon / Pass (Template Page 5 Top-Right Ribbon Reinterpretation) */}
                   <div data-reveal="sticker" className="delay-100 absolute top-4 right-5 sm:right-8 z-20 pointer-events-none">
@@ -504,8 +504,8 @@ export default function Experience({ content }) {
                 {/* ------------------------------------------------------------- */}
                 <div className="flex-1 p-6 sm:p-8 lg:p-10 xl:p-12 notebook-ruled space-y-7 flex flex-col justify-between bg-[#FAF6F0] relative overflow-hidden lg:pr-10 border-b-2 lg:border-b-0 border-earth-900/20">
                   
-                  {/* Delicate Pink Petals falling across bottom half of notebook sheet */}
-                  <FallingPetals count={4} className="opacity-80 z-0" />
+                  {/* Delicate Pink Petals & Fresh Green Leaves falling across notebook sheet */}
+                  <FallingPetals count={7} className="opacity-95 z-0" />
 
                   {/* Decorative Backstage Access Pass Ribbon (Mirrored to top-left) */}
                   <div className="absolute top-4 left-5 sm:left-8 z-20 pointer-events-none">

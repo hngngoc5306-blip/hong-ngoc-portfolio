@@ -111,8 +111,8 @@ export default function Contact({ content }) {
               {/* ----------------------------------------------------------------- */}
               <div className="lg:col-span-5 p-6 sm:p-10 lg:p-12 flex flex-col justify-between relative border-b-2 lg:border-b-0 lg:border-r border-earth-900/15 bg-[#FCFBF8] overflow-hidden">
                 
-                {/* Falling pink petals floating under polaroid frame */}
-                <FallingPetals count={4} className="opacity-70 z-0" />
+                {/* Falling pink petals & green leaves floating under polaroid frame */}
+                <FallingPetals count={7} className="opacity-95 z-0" />
 
                 {/* Pink Gingham Washi Tape at top-left (Pure CSS rendered, Page 9 exact replica) */}
                 <div className="flex justify-start pt-1 pb-4">
