@@ -51,10 +51,12 @@ export default function SelectedWork({ content }) {
           Not an isolated card, but a layered studio drafting board with pinned artifacts,
           hero specimen screen, drafting blueprint, and uneven overlapping contact sheets.
         */}
-        <div data-reveal="paper" className="delay-150 relative bg-white border-3 border-earth-900 shadow-[16px_16px_0_rgba(42,24,21,0.28)] p-6 sm:p-10 lg:p-14 mb-16 overflow-hidden">
+        <div data-reveal="paper" className="delay-150 relative bg-white border-3 border-earth-900 shadow-[16px_16px_0_rgba(42,24,21,0.28)] p-6 sm:p-10 lg:p-14 mb-16 overflow-visible">
           
-          {/* Subtle Falling Sakura Petals & Fresh Leaves on OwlUp studio board */}
-          <FallingPetals count={9} className="opacity-90 z-0" />
+          {/* Subtle Falling Sakura Petals & Fresh Leaves on OwlUp studio board (contained inside) */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+            <FallingPetals count={16} className="opacity-95 z-0" />
+          </div>
 
           {/* Blue Checkered Washi Tape on top left corner */}
           <div 

@@ -37,10 +37,12 @@ export default function Overview({ content }) {
       {/* Large Notebook Paper Spread with entrance assembly animation */}
       <div 
         data-reveal="paper"
-        className="relative z-10 max-w-7xl mx-auto bg-[#FAF6F0] p-6 sm:p-10 lg:p-14 border-2 border-earth-900 shadow-[10px_10px_0_rgba(42,24,21,0.25)] overflow-hidden"
+        className="relative z-10 max-w-7xl mx-auto bg-[#FAF6F0] p-6 sm:p-10 lg:p-14 border-2 border-earth-900 shadow-[10px_10px_0_rgba(42,24,21,0.25)] overflow-visible"
       >
-        {/* Subtle Falling Sakura Petals & Fresh Leaves on Overview spread */}
-        <FallingPetals count={9} className="opacity-90 z-0" />
+        {/* Subtle Falling Sakura Petals & Fresh Leaves on Overview spread (contained inside) */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+          <FallingPetals count={16} className="opacity-95 z-0" />
+        </div>
         
         {/* Binder clip at top center pinning the entire page */}
         <div 

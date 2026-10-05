@@ -4,162 +4,228 @@ import React from 'react';
  * Editorial Falling Sakura Petals & Fresh Leaves (Cánh hoa anh đào rơi chao lượn + lá xanh tươi)
  * Designed for scrapbook spreads with organic Japanese cherry blossom notched shape
  */
-export default function FallingPetals({ count = 12, className = '' }) {
+export default function FallingPetals({ count = 16, className = '' }) {
   // Rich array of cherry blossom petals with varied sizes, positions, delays, and fresh green leaves
   const items = [
     // 1. Sakura Petal (Top-left)
     {
       type: 'sakura',
-      top: '5%',
-      left: '10%',
-      width: 24,
-      height: 22,
+      top: '4%',
+      left: '8%',
+      width: 25,
+      height: 23,
       anim: 'petal-drift-a',
       delay: '0s',
       rot: '-18deg'
     },
-    // 2. Sakura Petal (Top-center)
+    // 2. Sakura Petal (Top-center-left)
     {
       type: 'sakura',
-      top: '12%',
-      left: '42%',
+      top: '10%',
+      left: '28%',
       width: 28,
       height: 25,
       anim: 'petal-drift-b',
-      delay: '2.1s',
-      rot: '24deg'
+      delay: '1.5s',
+      rot: '20deg'
     },
-    // 3. Fresh Green Leaf (Top-right)
+    // 3. Sakura Petal (Top-center)
+    {
+      type: 'sakura',
+      top: '6%',
+      left: '46%',
+      width: 24,
+      height: 22,
+      anim: 'petal-drift-c',
+      delay: '3.2s',
+      rot: '-12deg'
+    },
+    // 4. Fresh Green Leaf (Top-right)
     {
       type: 'leaf',
       top: '8%',
-      left: '78%',
+      left: '74%',
       width: 24,
       height: 14,
       anim: 'leaf-drift',
       delay: '1.2s',
       rot: '35deg'
     },
-    // 4. Sakura Petal (Upper-right)
+    // 5. Sakura Petal (Upper-far-right)
     {
       type: 'sakura',
-      top: '22%',
-      left: '86%',
-      width: 22,
-      height: 20,
-      anim: 'petal-drift-c',
-      delay: '3.6s',
-      rot: '-30deg'
-    },
-    // 5. Sakura Petal (Mid-left)
-    {
-      type: 'sakura',
-      top: '32%',
-      left: '18%',
+      top: '16%',
+      left: '88%',
       width: 26,
       height: 24,
-      anim: 'petal-drift-b',
-      delay: '4.5s',
-      rot: '12deg'
-    },
-    // 6. Fresh Green Leaf (Mid-center)
-    {
-      type: 'leaf',
-      top: '38%',
-      left: '52%',
-      width: 26,
-      height: 15,
-      anim: 'leaf-drift',
-      delay: '4.0s',
-      rot: '-25deg'
-    },
-    // 7. Sakura Petal (Mid-right)
-    {
-      type: 'sakura',
-      top: '46%',
-      left: '72%',
-      width: 30,
-      height: 27,
       anim: 'petal-drift-a',
-      delay: '1.8s',
-      rot: '-42deg'
+      delay: '2.4s',
+      rot: '-30deg'
     },
-    // 8. Sakura Petal (Lower-left)
+    // 6. Sakura Petal (Upper-mid-left)
     {
       type: 'sakura',
-      top: '58%',
-      left: '8%',
-      width: 23,
-      height: 21,
-      anim: 'petal-drift-c',
-      delay: '5.2s',
-      rot: '28deg'
-    },
-    // 9. Sakura Petal (Lower-center)
-    {
-      type: 'sakura',
-      top: '65%',
-      left: '36%',
+      top: '24%',
+      left: '16%',
       width: 27,
       height: 25,
-      anim: 'petal-drift-b',
-      delay: '3.1s',
-      rot: '-15deg'
+      anim: 'petal-drift-c',
+      delay: '4.1s',
+      rot: '28deg'
     },
-    // 10. Fresh Green Leaf (Lower-right)
+    // 7. Fresh Green Leaf (Upper-mid-center)
     {
       type: 'leaf',
-      top: '68%',
-      left: '84%',
+      top: '26%',
+      left: '60%',
       width: 25,
       height: 14,
       anim: 'leaf-drift',
-      delay: '2.7s',
-      rot: '42deg'
+      delay: '3.6s',
+      rot: '-20deg'
     },
-    // 11. Sakura Petal (Near-bottom left)
+    // 8. Sakura Petal (Mid-left)
     {
       type: 'sakura',
-      top: '78%',
-      left: '22%',
+      top: '36%',
+      left: '6%',
       width: 29,
       height: 26,
-      anim: 'petal-drift-a',
-      delay: '6.5s',
-      rot: '35deg'
+      anim: 'petal-drift-b',
+      delay: '0.8s',
+      rot: '14deg'
     },
-    // 12. Sakura Petal (Bottom-center)
+    // 9. Sakura Petal (Mid-center)
     {
       type: 'sakura',
-      top: '84%',
-      left: '56%',
+      top: '40%',
+      left: '38%',
+      width: 25,
+      height: 23,
+      anim: 'petal-drift-a',
+      delay: '5.0s',
+      rot: '-22deg'
+    },
+    // 10. Fresh Green Leaf (Mid-right)
+    {
+      type: 'leaf',
+      top: '42%',
+      left: '78%',
+      width: 26,
+      height: 15,
+      anim: 'leaf-drift',
+      delay: '4.8s',
+      rot: '25deg'
+    },
+    // 11. Sakura Petal (Mid-right)
+    {
+      type: 'sakura',
+      top: '48%',
+      left: '90%',
+      width: 27,
+      height: 25,
+      anim: 'petal-drift-c',
+      delay: '2.0s',
+      rot: '-38deg'
+    },
+    // 12. Sakura Petal (Lower-mid-left)
+    {
+      type: 'sakura',
+      top: '56%',
+      left: '22%',
+      width: 26,
+      height: 24,
+      anim: 'petal-drift-a',
+      delay: '3.5s',
+      rot: '32deg'
+    },
+    // 13. Fresh Green Leaf (Lower-mid-center)
+    {
+      type: 'leaf',
+      top: '58%',
+      left: '52%',
+      width: 23,
+      height: 13,
+      anim: 'leaf-drift',
+      delay: '2.8s',
+      rot: '-35deg'
+    },
+    // 14. Sakura Petal (Lower-center)
+    {
+      type: 'sakura',
+      top: '66%',
+      left: '34%',
+      width: 30,
+      height: 27,
+      anim: 'petal-drift-b',
+      delay: '1.2s',
+      rot: '-15deg'
+    },
+    // 15. Sakura Petal (Lower-right)
+    {
+      type: 'sakura',
+      top: '68%',
+      left: '82%',
       width: 25,
       height: 23,
       anim: 'petal-drift-c',
-      delay: '4.8s',
-      rot: '-28deg'
+      delay: '6.2s',
+      rot: '24deg'
     },
-    // 13. Fresh Green Leaf (Bottom-left)
+    // 16. Fresh Green Leaf (Lower-left)
     {
       type: 'leaf',
-      top: '88%',
+      top: '74%',
       left: '12%',
+      width: 24,
+      height: 14,
+      anim: 'leaf-drift',
+      delay: '5.2s',
+      rot: '40deg'
+    },
+    // 17. Sakura Petal (Near-bottom center)
+    {
+      type: 'sakura',
+      top: '78%',
+      left: '64%',
+      width: 28,
+      height: 25,
+      anim: 'petal-drift-a',
+      delay: '4.6s',
+      rot: '-26deg'
+    },
+    // 18. Sakura Petal (Bottom-left)
+    {
+      type: 'sakura',
+      top: '85%',
+      left: '24%',
+      width: 27,
+      height: 24,
+      anim: 'petal-drift-b',
+      delay: '3.8s',
+      rot: '18deg'
+    },
+    // 19. Fresh Green Leaf (Bottom-right)
+    {
+      type: 'leaf',
+      top: '86%',
+      left: '72%',
       width: 22,
       height: 13,
       anim: 'leaf-drift',
-      delay: '5.5s',
+      delay: '6.6s',
       rot: '-18deg'
     },
-    // 14. Sakura Petal (Bottom-right)
+    // 20. Sakura Petal (Bottom-far-right)
     {
       type: 'sakura',
-      top: '86%',
-      left: '79%',
+      top: '88%',
+      left: '92%',
       width: 26,
-      height: 24,
-      anim: 'petal-drift-b',
-      delay: '7.2s',
-      rot: '16deg'
+      height: 23,
+      anim: 'petal-drift-c',
+      delay: '5.8s',
+      rot: '-32deg'
     }
   ].slice(0, count);
 
