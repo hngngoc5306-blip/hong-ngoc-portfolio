@@ -677,19 +677,23 @@
   transform: scale(0.95);
 }
 
-/* Subtle ink trail fading */
-@keyframes inkFade {
+/* Cute Magical Star Particle fading & floating */
+@keyframes starSparkle {
   0% {
-    opacity: 0.5;
-    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.95;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(-50%, -4px) scale(1.15) rotate(15deg);
   }
   100% {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.3);
+    transform: translate(-50%, 8px) scale(0.2) rotate(45deg);
   }
 }
-.animate-ink-fade {
-  animation: inkFade 0.4s ease-out forwards;
+.animate-star-sparkle {
+  animation: starSparkle 0.45s ease-out forwards;
 }
 
 /* Accessibility: Respect Reduced Motion */
