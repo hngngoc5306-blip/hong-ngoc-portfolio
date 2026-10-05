@@ -54,7 +54,10 @@ export default function Experience({ content }) {
           OVERVIEW SPREAD:
           Master Event Production Archive Banner with 3 Stacked Archival Color Memos
         */}
-        <div data-reveal="paper" className="delay-150 relative mb-20 p-6 sm:p-10 lg:p-12 bg-white border-3 border-earth-900 shadow-[14px_14px_0_rgba(42,24,21,0.28)]">
+        <div data-reveal="paper" className="delay-150 relative mb-20 p-6 sm:p-10 lg:p-12 bg-white border-3 border-earth-900 shadow-[14px_14px_0_rgba(42,24,21,0.28)] overflow-hidden">
+          {/* Subtle Falling Sakura Petals & Fresh Leaves in Operations & Coordination */}
+          <FallingPetals count={8} className="opacity-90 z-0" />
+
           {/* Dispatch seal on top right with interactive touch */}
           <div className="scrapbook-interactive-stamp absolute -top-6 -right-4 w-16 sm:w-20 opacity-85 pointer-events-auto rotate-6 z-20 animate-cover-star" title="Dispatch seal">
             <img src="/assets/collage_elem_30.png" alt="Dispatch seal" className="w-full h-full object-contain filter drop-shadow-xs" />

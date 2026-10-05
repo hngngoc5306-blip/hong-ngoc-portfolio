@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ExternalLink, BookOpen, FileText, CheckCircle, BarChart3, Eye, X, Bookmark, Sparkles, ArrowUpRight } from 'lucide-react';
 import WashiTape from './WashiTape';
+import FallingPetals from './FallingPetals';
 
 export default function Research({ content }) {
   const r = content.research;
@@ -108,9 +109,12 @@ export default function Research({ content }) {
           {/* ======================================================== */}
           {/* PLATE 01 (FLAGSHIP): Published Journal Article in Sustainability (Q1) */}
           {/* ======================================================== */}
-          <div data-reveal="paper" className="delay-100 relative bg-[#FAF0F1] p-6 sm:p-10 lg:p-14 border-3 border-rosewood-600 shadow-[16px_16px_0_rgba(184,93,88,0.28)]">
+          <div data-reveal="paper" className="delay-100 relative bg-[#FAF0F1] p-6 sm:p-10 lg:p-14 border-3 border-rosewood-600 shadow-[16px_16px_0_rgba(184,93,88,0.28)] overflow-hidden">
+            {/* Subtle Falling Sakura Petals & Fresh Leaves in Plate 01 */}
+            <FallingPetals count={8} className="opacity-90 z-0" />
+
             {/* Washi tape on corner */}
-            <div data-reveal="sticker" className="delay-200 absolute -top-4 left-10 w-32 h-7 opacity-90 hidden sm:block -rotate-1 pointer-events-none">
+            <div data-reveal="sticker" className="delay-200 absolute -top-4 left-10 w-32 h-7 opacity-90 hidden sm:block -rotate-1 pointer-events-none z-10">
               <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
             </div>
 
@@ -201,7 +205,10 @@ export default function Research({ content }) {
           {/* ======================================================== */}
           {/* PLATE 02: Accepted Conference Research — SR-ICYREB 2025   */}
           {/* ======================================================== */}
-          <div data-reveal="paper" className="delay-150 bg-white p-6 sm:p-10 lg:p-12 border-3 border-earth-900 shadow-[12px_12px_0_rgba(42,24,21,0.22)] relative">
+          <div data-reveal="paper" className="delay-150 bg-white p-6 sm:p-10 lg:p-12 border-3 border-earth-900 shadow-[12px_12px_0_rgba(42,24,21,0.22)] relative overflow-hidden">
+            {/* Subtle Falling Sakura Petals & Fresh Leaves in Plate 02 */}
+            <FallingPetals count={8} className="opacity-90 z-0" />
+
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
               
               <div className="lg:col-span-7 space-y-5">
@@ -283,7 +290,10 @@ export default function Research({ content }) {
           {/* ======================================================== */}
           {/* PLATE 03: Completed Manuscript — SSB Tax Policy           */}
           {/* ======================================================== */}
-          <div data-reveal="paper" className="delay-200 bg-white p-6 sm:p-10 lg:p-12 border-3 border-earth-900 shadow-[12px_12px_0_rgba(42,24,21,0.22)] relative">
+          <div data-reveal="paper" className="delay-200 bg-white p-6 sm:p-10 lg:p-12 border-3 border-earth-900 shadow-[12px_12px_0_rgba(42,24,21,0.22)] relative overflow-hidden">
+            {/* Subtle Falling Sakura Petals & Fresh Leaves in Plate 03 */}
+            <FallingPetals count={8} className="opacity-90 z-0" />
+
             <div className="space-y-6">
               
               <div className="flex flex-wrap items-center gap-2.5">

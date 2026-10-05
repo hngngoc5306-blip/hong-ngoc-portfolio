@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ExternalLink, CheckCircle2, Layers, Cpu, Eye, Sparkles, X, Smartphone, GitBranch, ArrowUpRight } from 'lucide-react';
 import WashiTape from './WashiTape';
+import FallingPetals from './FallingPetals';
 
 export default function SelectedWork({ content }) {
   const w = content.work;
@@ -50,8 +51,11 @@ export default function SelectedWork({ content }) {
           Not an isolated card, but a layered studio drafting board with pinned artifacts,
           hero specimen screen, drafting blueprint, and uneven overlapping contact sheets.
         */}
-        <div data-reveal="paper" className="delay-150 relative bg-white border-3 border-earth-900 shadow-[16px_16px_0_rgba(42,24,21,0.28)] p-6 sm:p-10 lg:p-14 mb-16">
+        <div data-reveal="paper" className="delay-150 relative bg-white border-3 border-earth-900 shadow-[16px_16px_0_rgba(42,24,21,0.28)] p-6 sm:p-10 lg:p-14 mb-16 overflow-hidden">
           
+          {/* Subtle Falling Sakura Petals & Fresh Leaves on OwlUp studio board */}
+          <FallingPetals count={9} className="opacity-90 z-0" />
+
           {/* Blue Checkered Washi Tape on top left corner */}
           <div 
             className="living-stationery-tape scrapbook-interactive-tape absolute -top-5 left-12 w-36 h-8 z-20 hidden sm:block shadow-xs"
