@@ -174,8 +174,10 @@ export default function Overview({ content }) {
             <div data-reveal="paper" className="delay-250 pt-2 relative">
               <div className="relative p-5 sm:p-6 bg-white border-2 border-earth-400 shadow-[5px_5px_0_rgba(42,24,21,0.12)] notebook-ruled">
                 {/* Washi tape at corner */}
-                <div data-reveal="sticker" className="delay-300 absolute -top-3.5 right-6 w-24 sm:w-28 h-6 opacity-85 pointer-events-none rotate-2">
-                  <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
+                <div data-reveal="sticker" className="delay-300 absolute -top-3.5 right-6 w-24 sm:w-28 h-6 opacity-85 pointer-events-none">
+                  <div className="living-stationery-tape w-full h-full" style={{ '--tape-rot': '2deg' }}>
+                    <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
+                  </div>
                 </div>
 
                 <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 mb-4 whitespace-nowrap">

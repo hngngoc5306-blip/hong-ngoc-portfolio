@@ -171,6 +171,13 @@ export default function Research({ content }) {
                 className="delay-200 lg:col-span-5 relative p-4 bg-white border-3 border-earth-900 shadow-[8px_8px_0_rgba(42,24,21,0.2)] group cursor-pointer hover:-translate-y-1 transition-transform"
                 onClick={() => setSelectedResearchImage({ src: '/assets/13.jpg', title: r.records[0].title })}
               >
+                {/* Translucent Corner Washi Tape */}
+                <div className="absolute -top-3.5 right-6 w-28 h-6 pointer-events-none z-10 opacity-90">
+                  <div className="living-stationery-tape w-full h-full" style={{ '--tape-rot': '2deg' }}>
+                    <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
+                  </div>
+                </div>
+
                 <div className="flex justify-between items-center text-xs font-mono text-earth-800 mb-2.5 px-1 border-b border-earth-300 pb-1.5">
                   <span className="font-black uppercase tracking-wider text-rosewood-600">Plate I · Journal Excerpt</span>
                   <span className="text-earth-600 group-hover:text-earth-950 font-bold">Inspect ↗</span>
@@ -245,6 +252,13 @@ export default function Research({ content }) {
                 className="delay-200 lg:col-span-5 relative p-4 bg-[#FAF6F0] border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.15)] group cursor-pointer hover:-translate-y-1 transition-transform"
                 onClick={() => setSelectedResearchImage({ src: '/assets/14.jpg', title: r.records[1].title })}
               >
+                {/* Translucent Corner Washi Tape */}
+                <div className="absolute -top-3.5 left-6 w-28 h-6 pointer-events-none z-10 opacity-90">
+                  <div className="living-stationery-tape w-full h-full" style={{ '--tape-rot': '-2deg' }}>
+                    <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
+                  </div>
+                </div>
+
                 <div className="flex justify-between items-center text-xs font-mono text-earth-800 mb-2 px-1 border-b border-earth-300 pb-1">
                   <span className="font-black uppercase tracking-wider text-rosewood-600">Plate II · Conference Acceptance</span>
                   <span className="text-earth-600 group-hover:text-earth-950 font-bold">Inspect ↗</span>

@@ -20,8 +20,11 @@ export default function WashiTape({
 
   return (
     <div 
-      className={`absolute z-20 pointer-events-none select-none ${width} ${height} ${className}`}
-      style={{ transform: `rotate(${angle})` }}
+      className={`living-stationery-tape absolute z-20 pointer-events-none select-none ${width} ${height} ${className}`}
+      style={{ 
+        transform: `rotate(${angle})`,
+        '--tape-rot': angle,
+      }}
       aria-hidden="true"
     >
       <div 

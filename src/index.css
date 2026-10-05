@@ -657,6 +657,71 @@
 [data-reveal].is-revealed.delay-500 { transition-delay: 500ms !important; }
 [data-reveal].is-revealed.delay-600 { transition-delay: 600ms !important; }
 
+/* ==========================================================================
+   LIVING STATIONERY MICRO-MOTIONS (Lựa chọn 3: Chi tiết Scrapbook Sống)
+   Subtle continuous breathing & light shimmer on tape, clips, stars & notes
+   ========================================================================== */
+
+@keyframes tapeGentleBreathe {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--tape-rot, 0deg));
+    filter: drop-shadow(0 1px 2px rgba(42,24,21,0.08));
+  }
+  50% {
+    transform: translateY(-1.5px) rotate(calc(var(--tape-rot, 0deg) + 0.6deg));
+    filter: drop-shadow(0 3px 5px rgba(42,24,21,0.14));
+  }
+}
+
+@keyframes clipSubtleSway {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-1.5deg) translateY(-1px);
+  }
+}
+
+@keyframes ribbonFloat {
+  0%, 100% {
+    transform: rotate(var(--ribbon-rot, 3deg)) translateY(0px);
+  }
+  50% {
+    transform: rotate(calc(var(--ribbon-rot, 3deg) - 1.2deg)) translateY(-2px);
+  }
+}
+
+@keyframes noteBreathing {
+  0%, 100% {
+    transform: rotate(var(--note-rot, -1deg)) scale(1);
+  }
+  50% {
+    transform: rotate(calc(var(--note-rot, -1deg) + 0.5deg)) scale(1.008);
+  }
+}
+
+.living-stationery-tape {
+  animation: tapeGentleBreathe 6.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.living-stationery-clip {
+  animation: clipSubtleSway 5s ease-in-out infinite;
+  transform-origin: top center;
+  will-change: transform;
+}
+
+.living-stationery-ribbon {
+  animation: ribbonFloat 4.8s ease-in-out infinite;
+  transform-origin: top center;
+  will-change: transform;
+}
+
+.living-stationery-note {
+  animation: noteBreathing 7.5s ease-in-out infinite;
+  will-change: transform;
+}
+
 /* Interactive Tactile Scrapbook Element Hovers */
 .scrapbook-interactive-star {
   cursor: pointer;

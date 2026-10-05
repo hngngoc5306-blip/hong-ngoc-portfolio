@@ -113,13 +113,14 @@ export default function Contact({ content }) {
                 {/* Pink Gingham Washi Tape at top-left (Pure CSS rendered, Page 9 exact replica) */}
                 <div className="flex justify-start pt-1 pb-4">
                   <div 
-                    className="w-32 sm:w-40 h-7 sm:h-8 transform -rotate-1 shadow-xs border border-rose-400/40"
+                    className="living-stationery-tape w-32 sm:w-40 h-7 sm:h-8 shadow-xs border border-rose-400/40"
                     style={{
                       backgroundColor: '#FDE2E4',
                       backgroundImage: `
                         repeating-linear-gradient(0deg, rgba(226, 109, 92, 0.45) 0px, rgba(226, 109, 92, 0.45) 7px, transparent 7px, transparent 14px),
                         repeating-linear-gradient(90deg, rgba(226, 109, 92, 0.45) 0px, rgba(226, 109, 92, 0.45) 7px, transparent 7px, transparent 14px)
-                      `
+                      `,
+                      '--tape-rot': '-1deg'
                     }}
                   />
                 </div>
@@ -132,7 +133,8 @@ export default function Contact({ content }) {
                     
                     {/* Semi-translucent Beige Washi Tape crossing the top-left corner */}
                     <div 
-                      className="scrapbook-interactive-tape absolute -top-3.5 -left-4 w-28 sm:w-32 h-7 bg-[#EFE8D6]/90 backdrop-blur-xs border-y border-earth-400/60 shadow-2xs transform -rotate-12 pointer-events-none z-10"
+                      className="living-stationery-tape scrapbook-interactive-tape absolute -top-3.5 -left-4 w-28 sm:w-32 h-7 bg-[#EFE8D6]/90 backdrop-blur-xs border-y border-earth-400/60 shadow-2xs pointer-events-none z-10"
+                      style={{ '--tape-rot': '-12deg' }}
                     />
 
                     {/* Image 17: Natural sunlight portrait */}
@@ -271,13 +273,14 @@ export default function Contact({ content }) {
 
                   {/* Blue Gingham Washi Tape at bottom-right (Template Page 9 exact replica) */}
                   <div 
-                    className="w-32 sm:w-44 h-7 sm:h-8 transform rotate-1 shadow-xs border border-sky-400/50"
+                    className="living-stationery-tape w-32 sm:w-44 h-7 sm:h-8 shadow-xs border border-sky-400/50"
                     style={{
                       backgroundColor: '#E0F2FE',
                       backgroundImage: `
                         repeating-linear-gradient(0deg, rgba(56, 140, 210, 0.45) 0px, rgba(56, 140, 210, 0.45) 7px, transparent 7px, transparent 14px),
                         repeating-linear-gradient(90deg, rgba(56, 140, 210, 0.45) 0px, rgba(56, 140, 210, 0.45) 7px, transparent 7px, transparent 14px)
-                      `
+                      `,
+                      '--tape-rot': '1deg'
                     }}
                   />
                 </div>

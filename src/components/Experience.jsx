@@ -162,7 +162,9 @@ export default function Experience({ content }) {
               
               {/* Binder Clip at top left of notebook */}
               <div data-reveal="sticker" className="delay-200 absolute -top-7 left-[18%] -translate-x-1/2 w-12 h-12 z-30 pointer-events-none hidden md:block">
-                <img src="/assets/collage_elem_40.png" alt="Binder clip" className="w-full h-full object-contain filter drop-shadow-md" />
+                <div className="living-stationery-clip w-full h-full">
+                  <img src="/assets/collage_elem_40.png" alt="Binder clip" className="w-full h-full object-contain filter drop-shadow-md" />
+                </div>
               </div>
 
               {/* Flex Container: Left Spread (~33%) | Spiral Binding (Center) | Right Spread (~67%) */}
@@ -194,8 +196,10 @@ export default function Experience({ content }) {
                       onClick={() => setSelectedPhoto({ src: `/assets/${tatakeEvent.images[0]}`, title: `${tatakeEvent.title} — Main Concert Hall Stage & Audience` })}
                     >
                       {/* Translucent Washi tape at top */}
-                      <div data-reveal="sticker" className="delay-200 absolute -top-3.5 left-1/2 -translate-x-1/2 w-32 h-7 opacity-90 pointer-events-none rotate-1">
-                        <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
+                      <div data-reveal="sticker" className="delay-200 absolute -top-3.5 left-1/2 -translate-x-1/2 w-32 h-7 opacity-90 pointer-events-none">
+                        <div className="living-stationery-tape w-full h-full" style={{ '--tape-rot': '1deg' }}>
+                          <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
+                        </div>
                       </div>
 
                       <div className="aspect-[4/3] bg-earth-950 overflow-hidden border border-earth-300">
@@ -222,8 +226,10 @@ export default function Experience({ content }) {
                       onClick={() => setSelectedPhoto({ src: `/assets/${tatakeEvent.images[1]}`, title: `${tatakeEvent.title} — Backstage Operations & Team` })}
                     >
                       {/* Translucent washi tape on top of backstage photo */}
-                      <div data-reveal="sticker" className="delay-300 absolute -top-3 right-6 w-24 h-5 opacity-85 pointer-events-none -rotate-2">
-                        <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
+                      <div data-reveal="sticker" className="delay-300 absolute -top-3 right-6 w-24 h-5 opacity-85 pointer-events-none">
+                        <div className="living-stationery-tape w-full h-full" style={{ '--tape-rot': '-2deg' }}>
+                          <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
+                        </div>
                       </div>
 
                       <div className="aspect-[4/3] bg-earth-950 overflow-hidden border border-earth-300">
@@ -287,11 +293,13 @@ export default function Experience({ content }) {
                 <div className="flex-1 p-6 sm:p-8 lg:p-10 xl:p-12 notebook-ruled space-y-7 flex flex-col justify-between bg-[#FAF6F0] relative overflow-hidden lg:pl-10">
                   
                   {/* Decorative Concert Ribbon / Pass (Template Page 5 Top-Right Ribbon Reinterpretation) */}
-                  <div data-reveal="sticker" className="delay-100 absolute top-4 right-5 sm:right-8 z-20 flex flex-col items-center pointer-events-none transform rotate-3">
-                    <div className="bg-[#FF007F] text-white font-mono text-[10px] font-black uppercase tracking-widest px-3 py-1 shadow-xs border border-earth-900">
-                      LIVE ACCESS PASS
+                  <div data-reveal="sticker" className="delay-100 absolute top-4 right-5 sm:right-8 z-20 pointer-events-none">
+                    <div className="living-stationery-ribbon flex flex-col items-center" style={{ '--ribbon-rot': '3deg' }}>
+                      <div className="bg-[#FF007F] text-white font-mono text-[10px] font-black uppercase tracking-widest px-3 py-1 shadow-xs border border-earth-900">
+                        LIVE ACCESS PASS
+                      </div>
+                      <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[8px] border-t-[#FF007F]" />
                     </div>
-                    <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[8px] border-t-[#FF007F]" />
                   </div>
 
                   <div className="space-y-6">
@@ -479,7 +487,9 @@ export default function Experience({ content }) {
               
               {/* Binder Clip at top right clipping the photo memory page */}
               <div data-reveal="sticker" className="delay-200 absolute -top-7 right-[18%] translate-x-1/2 w-12 h-12 z-30 pointer-events-none hidden md:block">
-                <img src="/assets/collage_elem_40.png" alt="Binder clip" className="w-full h-full object-contain filter drop-shadow-md" />
+                <div className="living-stationery-clip w-full h-full">
+                  <img src="/assets/collage_elem_40.png" alt="Binder clip" className="w-full h-full object-contain filter drop-shadow-md" />
+                </div>
               </div>
 
               {/* Flex Container: Left Spread (~67%) | Spiral Binding (Center) | Right Spread (~33%) */}
@@ -491,11 +501,13 @@ export default function Experience({ content }) {
                 <div className="flex-1 p-6 sm:p-8 lg:p-10 xl:p-12 notebook-ruled space-y-7 flex flex-col justify-between bg-[#FAF6F0] relative overflow-hidden lg:pr-10 border-b-2 lg:border-b-0 border-earth-900/20">
                   
                   {/* Decorative Backstage Access Pass Ribbon (Mirrored to top-left) */}
-                  <div className="absolute top-4 left-5 sm:left-8 z-20 flex flex-col items-center pointer-events-none transform -rotate-3">
-                    <div className="bg-[#FF007F] text-white font-mono text-[10px] font-black uppercase tracking-widest px-3 py-1 shadow-xs border border-earth-900">
-                      BACKSTAGE ACCESS PASS
+                  <div className="absolute top-4 left-5 sm:left-8 z-20 pointer-events-none">
+                    <div className="living-stationery-ribbon flex flex-col items-center" style={{ '--ribbon-rot': '-3deg' }}>
+                      <div className="bg-[#FF007F] text-white font-mono text-[10px] font-black uppercase tracking-widest px-3 py-1 shadow-xs border border-earth-900">
+                        BACKSTAGE ACCESS PASS
+                      </div>
+                      <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[8px] border-t-[#FF007F]" />
                     </div>
-                    <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[8px] border-t-[#FF007F]" />
                   </div>
 
                   <div className="space-y-6">
@@ -695,8 +707,10 @@ export default function Experience({ content }) {
                       onClick={() => setSelectedPhoto({ src: `/assets/${toTheLineEvent.images[0]}`, title: `${toTheLineEvent.title} — Full Symphonic Hall & Production` })}
                     >
                       {/* Translucent Washi tape at top */}
-                      <div data-reveal="sticker" className="delay-200 absolute -top-3.5 left-1/2 -translate-x-1/2 w-32 h-7 opacity-90 pointer-events-none -rotate-1">
-                        <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
+                      <div data-reveal="sticker" className="delay-200 absolute -top-3.5 left-1/2 -translate-x-1/2 w-32 h-7 opacity-90 pointer-events-none">
+                        <div className="living-stationery-tape w-full h-full" style={{ '--tape-rot': '-1deg' }}>
+                          <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
+                        </div>
                       </div>
 
                       <div className="aspect-[4/3] bg-earth-950 overflow-hidden border border-earth-300">
@@ -723,8 +737,10 @@ export default function Experience({ content }) {
                       onClick={() => setSelectedPhoto({ src: `/assets/${toTheLineEvent.images[1]}`, title: `${toTheLineEvent.title} — Backstage Operations & Artists` })}
                     >
                       {/* Translucent washi tape on top of backstage photo */}
-                      <div data-reveal="sticker" className="delay-300 absolute -top-3 left-6 w-24 h-5 opacity-85 pointer-events-none rotate-2">
-                        <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
+                      <div data-reveal="sticker" className="delay-300 absolute -top-3 left-6 w-24 h-5 opacity-85 pointer-events-none">
+                        <div className="living-stationery-tape w-full h-full" style={{ '--tape-rot': '2deg' }}>
+                          <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
+                        </div>
                       </div>
 
                       <div className="aspect-[4/3] bg-earth-950 overflow-hidden border border-earth-300">

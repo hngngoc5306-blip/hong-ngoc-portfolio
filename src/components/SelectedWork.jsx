@@ -54,17 +54,18 @@ export default function SelectedWork({ content }) {
           
           {/* Blue Checkered Washi Tape on top left corner */}
           <div 
-            className="scrapbook-interactive-tape absolute -top-5 left-12 w-36 h-8 z-20 hidden sm:block rotate-1 shadow-xs"
+            className="living-stationery-tape scrapbook-interactive-tape absolute -top-5 left-12 w-36 h-8 z-20 hidden sm:block shadow-xs"
             style={{
               backgroundColor: '#DCE8F2',
               backgroundImage: 'repeating-linear-gradient(0deg, rgba(70,130,180,0.3) 0px, rgba(70,130,180,0.3) 6px, transparent 6px, transparent 12px), repeating-linear-gradient(90deg, rgba(70,130,180,0.3) 0px, rgba(70,130,180,0.3) 6px, transparent 6px, transparent 12px)',
-              border: '1.5px solid rgba(70,130,180,0.6)'
+              border: '1.5px solid rgba(70,130,180,0.6)',
+              '--tape-rot': '1deg'
             }}
           />
 
           {/* Yellow Post-it Note with Binder Clip (Studio Wall Annotation) */}
-          <div className="scrapbook-interactive-tape absolute -top-10 right-6 sm:right-16 w-56 sm:w-64 template-sticky-yellow p-4.5 transform rotate-2 z-20 hidden md:block shadow-md">
-            <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-10 h-10 pointer-events-none">
+          <div className="living-stationery-note scrapbook-interactive-tape absolute -top-10 right-6 sm:right-16 w-56 sm:w-64 template-sticky-yellow p-4.5 z-20 hidden md:block shadow-md" style={{ '--note-rot': '2deg' }}>
+            <div className="living-stationery-clip absolute -top-6 left-1/2 -translate-x-1/2 w-10 h-10 pointer-events-none">
               <img src="/assets/collage_elem_40.png" alt="Clip" className="w-full h-full object-contain filter drop-shadow-xs" />
             </div>
             <p className="font-editorial-serif text-sm text-earth-900 leading-snug pt-2 text-justify font-bold">
