@@ -197,8 +197,8 @@ export default function About({ content }) {
 
               {/* Lined Notebook Paper Memo */}
               <div className="relative p-5 bg-[#FAF0F1] border-2 border-rosewood-400 shadow-[4px_4px_0_rgba(42,24,21,0.1)] notebook-ruled overflow-hidden">
-                {/* Falling pink petals & green leaves drift under memo text */}
-                <FallingPetals count={6} className="opacity-95 z-0" />
+                {/* Falling pink sakura petals & green leaves drift under memo text */}
+                <FallingPetals count={9} className="opacity-95 z-0" />
 
                 <div className="absolute -top-3.5 left-8 w-24 h-6 opacity-90 pointer-events-none rotate-1 z-10">
                   <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />

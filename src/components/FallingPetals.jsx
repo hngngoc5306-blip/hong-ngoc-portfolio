@@ -1,121 +1,165 @@
 import React from 'react';
 
 /**
- * Editorial Falling Pink Petals & Fresh Green Leaves (Cánh hoa hồng + Lá xanh rơi rải rác chìm dưới text)
- * Designed for scrapbook spreads with organic floating physics
+ * Editorial Falling Sakura Petals & Fresh Leaves (Cánh hoa anh đào rơi chao lượn + lá xanh tươi)
+ * Designed for scrapbook spreads with organic Japanese cherry blossom notched shape
  */
-export default function FallingPetals({ count = 8, className = '' }) {
-  // Rich list of petals and vibrant green leaves
+export default function FallingPetals({ count = 12, className = '' }) {
+  // Rich array of cherry blossom petals with varied sizes, positions, delays, and fresh green leaves
   const items = [
-    // 1. Pink Petal (Top-left)
+    // 1. Sakura Petal (Top-left)
     {
-      type: 'petal',
-      top: '8%',
-      left: '12%',
-      width: 22,
-      height: 14,
+      type: 'sakura',
+      top: '5%',
+      left: '10%',
+      width: 24,
+      height: 22,
       anim: 'petal-drift-a',
       delay: '0s',
-      rot: '-15deg'
+      rot: '-18deg'
     },
-    // 2. Fresh Green Leaf (Top-right)
+    // 2. Sakura Petal (Top-center)
+    {
+      type: 'sakura',
+      top: '12%',
+      left: '42%',
+      width: 28,
+      height: 25,
+      anim: 'petal-drift-b',
+      delay: '2.1s',
+      rot: '24deg'
+    },
+    // 3. Fresh Green Leaf (Top-right)
     {
       type: 'leaf',
-      top: '15%',
-      left: '75%',
-      width: 20,
-      height: 12,
+      top: '8%',
+      left: '78%',
+      width: 24,
+      height: 14,
       anim: 'leaf-drift',
       delay: '1.2s',
       rot: '35deg'
     },
-    // 3. Pink Petal (Upper-center)
+    // 4. Sakura Petal (Upper-right)
     {
-      type: 'petal',
-      top: '28%',
-      left: '42%',
-      width: 26,
-      height: 16,
-      anim: 'petal-drift-b',
-      delay: '2.5s',
-      rot: '20deg'
+      type: 'sakura',
+      top: '22%',
+      left: '86%',
+      width: 22,
+      height: 20,
+      anim: 'petal-drift-c',
+      delay: '3.6s',
+      rot: '-30deg'
     },
-    // 4. Fresh Green Leaf (Mid-left)
+    // 5. Sakura Petal (Mid-left)
+    {
+      type: 'sakura',
+      top: '32%',
+      left: '18%',
+      width: 26,
+      height: 24,
+      anim: 'petal-drift-b',
+      delay: '4.5s',
+      rot: '12deg'
+    },
+    // 6. Fresh Green Leaf (Mid-center)
     {
       type: 'leaf',
-      top: '40%',
-      left: '20%',
-      width: 24,
-      height: 13,
+      top: '38%',
+      left: '52%',
+      width: 26,
+      height: 15,
       anim: 'leaf-drift',
       delay: '4.0s',
       rot: '-25deg'
     },
-    // 5. Pink Petal (Mid-right)
+    // 7. Sakura Petal (Mid-right)
     {
-      type: 'petal',
-      top: '52%',
-      left: '82%',
-      width: 24,
-      height: 15,
-      anim: 'petal-drift-c',
-      delay: '1.8s',
-      rot: '-35deg'
-    },
-    // 6. Pink Petal (Lower-left)
-    {
-      type: 'petal',
-      top: '65%',
-      left: '28%',
-      width: 20,
-      height: 13,
+      type: 'sakura',
+      top: '46%',
+      left: '72%',
+      width: 30,
+      height: 27,
       anim: 'petal-drift-a',
-      delay: '5.2s',
-      rot: '15deg'
+      delay: '1.8s',
+      rot: '-42deg'
     },
-    // 7. Fresh Green Leaf (Lower-center)
+    // 8. Sakura Petal (Lower-left)
+    {
+      type: 'sakura',
+      top: '58%',
+      left: '8%',
+      width: 23,
+      height: 21,
+      anim: 'petal-drift-c',
+      delay: '5.2s',
+      rot: '28deg'
+    },
+    // 9. Sakura Petal (Lower-center)
+    {
+      type: 'sakura',
+      top: '65%',
+      left: '36%',
+      width: 27,
+      height: 25,
+      anim: 'petal-drift-b',
+      delay: '3.1s',
+      rot: '-15deg'
+    },
+    // 10. Fresh Green Leaf (Lower-right)
     {
       type: 'leaf',
-      top: '72%',
-      left: '58%',
-      width: 22,
-      height: 12,
+      top: '68%',
+      left: '84%',
+      width: 25,
+      height: 14,
       anim: 'leaf-drift',
-      delay: '3.1s',
-      rot: '40deg'
+      delay: '2.7s',
+      rot: '42deg'
     },
-    // 8. Pink Petal (Lower-right)
+    // 11. Sakura Petal (Near-bottom left)
     {
-      type: 'petal',
-      top: '82%',
-      left: '88%',
-      width: 28,
-      height: 17,
-      anim: 'petal-drift-b',
+      type: 'sakura',
+      top: '78%',
+      left: '22%',
+      width: 29,
+      height: 26,
+      anim: 'petal-drift-a',
       delay: '6.5s',
-      rot: '-20deg'
+      rot: '35deg'
     },
-    // 9. Extra Small Petal
+    // 12. Sakura Petal (Bottom-center)
     {
-      type: 'petal',
-      top: '35%',
-      left: '64%',
-      width: 18,
-      height: 11,
+      type: 'sakura',
+      top: '84%',
+      left: '56%',
+      width: 25,
+      height: 23,
       anim: 'petal-drift-c',
-      delay: '3.8s',
-      rot: '45deg'
+      delay: '4.8s',
+      rot: '-28deg'
     },
-    // 10. Extra Fresh Leaf
+    // 13. Fresh Green Leaf (Bottom-left)
     {
       type: 'leaf',
       top: '88%',
-      left: '15%',
-      width: 21,
-      height: 11,
+      left: '12%',
+      width: 22,
+      height: 13,
       anim: 'leaf-drift',
-      delay: '5.8s',
-      rot: '-10deg'
+      delay: '5.5s',
+      rot: '-18deg'
+    },
+    // 14. Sakura Petal (Bottom-right)
+    {
+      type: 'sakura',
+      top: '86%',
+      left: '79%',
+      width: 26,
+      height: 24,
+      anim: 'petal-drift-b',
+      delay: '7.2s',
+      rot: '16deg'
     }
   ].slice(0, count);
 
@@ -134,72 +178,82 @@ export default function FallingPetals({ count = 8, className = '' }) {
             animationDelay: item.delay,
           }}
         >
-          {item.type === 'petal' ? (
-            /* Organic Rose Petal SVG: Vibrant Rose/Pink Gradient with Inner Vein */
+          {item.type === 'sakura' ? (
+            /* 
+              AUTHENTIC SAKURA (CHERRY BLOSSOM) PETAL:
+              Distinctive heart-notched cleft at the wide top edge,
+              tapering down to a delicate petal base.
+            */
             <svg
               width={item.width}
               height={item.height}
-              viewBox="0 0 32 20"
+              viewBox="0 0 32 30"
               fill="none"
               style={{ transform: `rotate(${item.rot})` }}
-              className="filter drop-shadow-[0_1.5px_3px_rgba(226,109,92,0.28)]"
+              className="filter drop-shadow-[0_2px_4px_rgba(235,90,130,0.32)]"
             >
+              {/* Petal Outer Body with Notched Sakura Cleft */}
               <path
-                d="M1 10 C4 1, 23 1, 31 10 C23 19, 4 19, 1 10 Z"
-                fill="url(#vibrantPetalGradient)"
-                opacity="0.95"
+                d="M16 28 C10 21, 2 15, 2 8 C2 3, 7 0.5, 12 1 C14.2 1.3, 15.3 3, 16 4.5 C16.7 3, 17.8 1.3, 20 1 C25 0.5, 30 3, 30 8 C30 15, 22 21, 16 28 Z"
+                fill="url(#sakuraGradient)"
+                opacity="0.96"
               />
+              {/* Soft Inner Sakura Highlight / Center Crease */}
               <path
-                d="M4 10 Q16 7 28 10"
-                stroke="#FFF5F7"
-                strokeWidth="1"
+                d="M16 5.5 C16 11, 16 18, 16 26"
+                stroke="#FFF1F5"
+                strokeWidth="1.1"
                 strokeLinecap="round"
-                opacity="0.75"
+                opacity="0.8"
               />
+              {/* Delicate radial gradient for tender sakura blush */}
               <defs>
-                <linearGradient id="vibrantPetalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#FF94B8" />
-                  <stop offset="45%" stopColor="#F06292" />
-                  <stop offset="100%" stopColor="#E26D5C" />
+                <linearGradient id="sakuraGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                  <stop offset="0%" stopColor="#FA82A5" />
+                  <stop offset="55%" stopColor="#FFADC6" />
+                  <stop offset="100%" stopColor="#FFF0F5" />
                 </linearGradient>
               </defs>
             </svg>
           ) : (
-            /* Fresh Botanical Green Leaf SVG: Lush Spring Green with Center Vein */
+            /* 
+              FRESH SPRING LEAF:
+              Smooth lanceolate botanical leaf with vivid green gradient & center stem
+            */
             <svg
               width={item.width}
               height={item.height}
               viewBox="0 0 32 18"
               fill="none"
               style={{ transform: `rotate(${item.rot})` }}
-              className="filter drop-shadow-[0_1.5px_3px_rgba(46,125,50,0.25)]"
+              className="filter drop-shadow-[0_2px_4px_rgba(38,135,50,0.28)]"
             >
               <path
                 d="M2 9 C8 1, 24 1, 30 9 C24 17, 8 17, 2 9 Z"
                 fill="url(#vibrantLeafGradient)"
-                opacity="0.95"
+                opacity="0.96"
               />
               {/* Leaf Center Stem */}
               <path
                 d="M4 9 L28 9"
-                stroke="#C8E6C9"
-                strokeWidth="1"
+                stroke="#D4EDDA"
+                strokeWidth="1.2"
                 strokeLinecap="round"
-                opacity="0.8"
+                opacity="0.85"
               />
               {/* Secondary delicate veins */}
               <path
-                d="M12 9 L17 6 M18 9 L23 6 M12 9 L17 12 M18 9 L23 12"
-                stroke="#C8E6C9"
-                strokeWidth="0.75"
+                d="M12 9 L17 5.5 M18 9 L23 5.5 M12 9 L17 12.5 M18 9 L23 12.5"
+                stroke="#D4EDDA"
+                strokeWidth="0.8"
                 strokeLinecap="round"
-                opacity="0.65"
+                opacity="0.75"
               />
               <defs>
                 <linearGradient id="vibrantLeafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#81C784" />
-                  <stop offset="50%" stopColor="#4CAF50" />
-                  <stop offset="100%" stopColor="#2E7D32" />
+                  <stop offset="0%" stopColor="#8CE08A" />
+                  <stop offset="45%" stopColor="#43B948" />
+                  <stop offset="100%" stopColor="#257529" />
                 </linearGradient>
               </defs>
             </svg>
