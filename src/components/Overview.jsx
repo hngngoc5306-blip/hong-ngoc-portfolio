@@ -166,18 +166,20 @@ export default function Overview({ content }) {
                   <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
                 </div>
 
-                <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 mb-3 flex items-center gap-2">
+                <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 mb-4 flex items-center gap-2">
                   <span>{o.meIn3WordsTitle}</span>
                   <span className="font-editorial-script text-rosewood-600 font-bold text-base">~ self reflection ~</span>
                 </h3>
 
-                <div className="space-y-3 text-sm">
+                <div className="space-y-3.5 text-left">
                   {o.meIn3Words.map((item, idx) => (
-                    <div key={idx} className="flex items-baseline gap-2.5">
-                      <span className="font-black text-earth-900 font-editorial-serif text-lg sm:text-xl shrink-0">
-                        {item.word}:
+                    <div key={idx} className="block text-left">
+                      <span className="font-black text-earth-900 font-editorial-serif text-lg sm:text-xl block leading-tight">
+                        {item.word}
                       </span>
-                      <span className="text-earth-800 italic font-editorial-script text-lg sm:text-xl">“{item.desc}”</span>
+                      <p className="text-earth-800 italic font-editorial-script text-lg sm:text-xl leading-snug mt-0.5 text-left">
+                        “{item.desc}”
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -187,7 +189,8 @@ export default function Overview({ content }) {
           </div>
 
           {/* ========================================================= */}
-          {/* CENTER COLUMN: Bio, Expertise, Tools, Language, Soft Skills, Education, Snapshot */}
+          {/* ========================================================= */}
+          {/* CENTER COLUMN: Bio, Expertise + Soft Skills, Tools + Language + Academic Snapshot */}
           {/* ========================================================= */}
           <div className="lg:col-span-5 xl:col-span-6 space-y-8">
             
@@ -206,41 +209,62 @@ export default function Overview({ content }) {
               </p>
             </div>
 
-            {/* Expertise & Tools: Open Typographic Columns */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-5 border-t border-earth-300">
+            {/* Main Content Columns: [Expertise -> Soft Skills] & [Tools -> Language -> Academic Snapshot] */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-7 pt-5 border-t border-earth-300 items-start">
               
-              {/* Expertise List */}
-              <div className="space-y-3.5">
-                <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 pb-1.5 border-b border-earth-300 flex items-center gap-2 tracking-wide uppercase">
-                  <span className="w-2 h-2 bg-earth-900 shrink-0" />
-                  {o.expertiseTitle}
-                </h3>
-                <div className="space-y-4 text-earth-800">
-                  <div>
-                    <span className="font-mono text-xs uppercase tracking-wider text-rosewood-600 font-bold block mb-1.5">
-                      Research & Modeling
-                    </span>
-                    <ul className="space-y-1.5 pl-2.5 border-l-2 border-earth-300 text-sm sm:text-base font-medium">
-                      {o.expertiseResearch.map((item, idx) => (
-                        <li key={idx} className="hover:text-earth-900 transition-colors leading-snug">• {item}</li>
-                      ))}
-                    </ul>
+              {/* SUB-COLUMN A: EXPERTISE -> SOFT SKILLS */}
+              <div className="space-y-7">
+                {/* Expertise List */}
+                <div className="space-y-3.5">
+                  <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 pb-1.5 border-b border-earth-300 flex items-center gap-2 tracking-wide uppercase">
+                    <span className="w-2 h-2 bg-earth-900 shrink-0" />
+                    {o.expertiseTitle}
+                  </h3>
+                  <div className="space-y-4 text-earth-800">
+                    <div>
+                      <span className="font-mono text-xs uppercase tracking-wider text-rosewood-600 font-bold block mb-1.5">
+                        Research & Modeling
+                      </span>
+                      <ul className="space-y-1.5 pl-2.5 border-l-2 border-earth-300 text-sm sm:text-base font-medium">
+                        {o.expertiseResearch.map((item, idx) => (
+                          <li key={idx} className="hover:text-earth-900 transition-colors leading-snug">• {item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <span className="font-mono text-xs uppercase tracking-wider text-accent-blue font-bold block mb-1.5">
+                        Domain & Operations
+                      </span>
+                      <ul className="space-y-1.5 pl-2.5 border-l-2 border-earth-300 text-sm sm:text-base font-medium">
+                        {o.expertiseDomain.map((item, idx) => (
+                          <li key={idx} className="hover:text-earth-900 transition-colors leading-snug">• {item}</li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <div>
-                    <span className="font-mono text-xs uppercase tracking-wider text-accent-blue font-bold block mb-1.5">
-                      Domain & Operations
-                    </span>
-                    <ul className="space-y-1.5 pl-2.5 border-l-2 border-earth-300 text-sm sm:text-base font-medium">
-                      {o.expertiseDomain.map((item, idx) => (
-                        <li key={idx} className="hover:text-earth-900 transition-colors leading-snug">• {item}</li>
-                      ))}
-                    </ul>
+                </div>
+
+                {/* Soft Skills: Directly below Expertise, arranged into ONE SINGLE VERTICAL COLUMN */}
+                <div className="pt-2 border-t border-earth-200">
+                  <h3 className="font-editorial-serif font-black text-base sm:text-lg text-earth-900 uppercase tracking-wider mb-3">
+                    {o.softSkillsTitle}
+                  </h3>
+                  <div className="flex flex-col items-start space-y-2">
+                    {o.softSkills.map((s, idx) => (
+                      <span 
+                        key={idx} 
+                        className="editorial-tag bg-paper-100 hover:bg-earth-900 hover:text-paper-50 transition-colors cursor-default text-xs sm:text-sm font-semibold border border-earth-900/40 px-3 py-1 block w-fit"
+                      >
+                        {s}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
 
-              {/* Tools & Language */}
-              <div className="space-y-6">
+              {/* SUB-COLUMN B: TOOLS -> LANGUAGE -> ACADEMIC SNAPSHOT */}
+              <div className="space-y-7">
+                {/* Tools */}
                 <div>
                   <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 pb-1.5 border-b border-earth-300 flex items-center gap-2 tracking-wide uppercase">
                     <span className="w-2 h-2 bg-accent-terracotta shrink-0" />
@@ -258,6 +282,7 @@ export default function Overview({ content }) {
                   </div>
                 </div>
 
+                {/* Language */}
                 <div>
                   <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 pb-1.5 border-b border-earth-300 flex items-center gap-2 tracking-wide uppercase">
                     <span className="w-2 h-2 bg-accent-sage shrink-0" />
@@ -272,108 +297,44 @@ export default function Overview({ content }) {
                     ))}
                   </div>
                 </div>
-              </div>
 
-            </div>
+                {/* Academic Snapshot: DIRECTLY BELOW LANGUAGE */}
+                <div className="pt-2 border-t border-earth-200">
+                  <div className="border-3 border-earth-900 bg-earth-900 text-paper-50 p-5 shadow-[6px_6px_0_rgba(42,24,21,0.25)] relative overflow-hidden">
+                    <div className="flex items-center gap-2.5 mb-3.5 pb-2 border-b border-earth-700">
+                      <BookMarked size={18} className="text-[#EBBEC3]" />
+                      <h3 className="font-editorial-serif font-black text-base text-paper-50 uppercase tracking-wider">
+                        {o.snapshotTitle}
+                      </h3>
+                    </div>
 
-            {/* Soft Skills: Rectangular Archival Stamp Tags */}
-            <div className="pt-2">
-              <h3 className="font-editorial-serif font-black text-base sm:text-lg text-earth-900 uppercase tracking-wider mb-2.5">
-                {o.softSkillsTitle}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {o.softSkills.map((s, idx) => (
-                  <span 
-                    key={idx} 
-                    className="editorial-tag bg-paper-100 hover:bg-earth-900 hover:text-paper-50 transition-colors cursor-default text-xs sm:text-sm font-semibold border border-earth-900/40 px-3 py-1"
-                  >
-                    {s}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Horizontal Row: EDUCATION & ACADEMIC SNAPSHOT (Below Language/Tools, horizontally aligned) */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-5 border-t border-earth-300">
-              {/* Education Open Ledger */}
-              <div className="border-2 border-earth-900 bg-white p-5 sm:p-6 shadow-[5px_5px_0_rgba(42,24,21,0.15)] flex flex-col justify-between">
-                <div>
-                  <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 uppercase tracking-wider mb-4 pb-2 border-b-2 border-earth-900">
-                    {o.educationTitle}
-                  </h3>
-
-                  <div className="space-y-4">
-                    {o.eduItems.map((edu, idx) => (
-                      <div 
-                        key={idx} 
-                        className={`p-3.5 border-2 text-xs sm:text-sm space-y-1.5 ${
-                          edu.highlight 
-                            ? 'bg-[#FAF0F1] border-rosewood-500' 
-                            : 'bg-paper-100 border-earth-400'
-                        }`}
-                      >
-                        <div className="flex justify-between items-center">
-                          <span className={`font-mono text-xs font-bold px-2 py-0.5 ${
-                            edu.highlight ? 'bg-rosewood-600 text-white' : 'bg-earth-800 text-paper-50'
-                          }`}>
-                            {edu.period}
-                          </span>
-                          {edu.highlight && (
-                            <span className="text-xs uppercase font-black text-rosewood-600 tracking-wider">
-                              Current Degree
-                            </span>
-                          )}
+                    <div className="grid grid-cols-2 gap-2.5 pt-1">
+                      {o.snapshotStats.map((st, idx) => (
+                        <div key={idx} className="bg-earth-800/90 p-3 border border-earth-700 flex flex-col justify-center">
+                          <div className="font-editorial-serif text-2xl sm:text-3xl font-black text-[#EBBEC3]">
+                            {st.num}
+                          </div>
+                          <div className="text-[11px] font-mono text-paper-200 uppercase tracking-wider leading-tight mt-1 font-semibold">
+                            {st.label}
+                          </div>
                         </div>
-                        <div className="font-black text-earth-900 text-base sm:text-lg pt-1 font-editorial-serif leading-snug">
-                          {edu.school}
-                        </div>
-                        <div className="text-earth-800 font-semibold text-xs sm:text-sm">
-                          {edu.major}
-                        </div>
-                        <div className="text-xs text-earth-600 font-mono font-medium">
-                          {edu.status}
-                        </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Academic Snapshot — Vintage Catalog Matrix */}
-              <div className="border-3 border-earth-900 bg-earth-900 text-paper-50 p-5 sm:p-6 shadow-[6px_6px_0_rgba(42,24,21,0.25)] relative overflow-hidden flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center gap-2.5 mb-4 pb-2.5 border-b border-earth-700">
-                    <BookMarked size={18} className="text-[#EBBEC3]" />
-                    <h3 className="font-editorial-serif font-black text-base sm:text-lg text-paper-50 uppercase tracking-wider">
-                      {o.snapshotTitle}
-                    </h3>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3 pt-1">
-                    {o.snapshotStats.map((st, idx) => (
-                      <div key={idx} className="bg-earth-800/90 p-3.5 border border-earth-700 flex flex-col justify-center">
-                        <div className="font-editorial-serif text-3xl font-black text-[#EBBEC3]">
-                          {st.num}
-                        </div>
-                        <div className="text-xs font-mono text-paper-200 uppercase tracking-wider leading-tight mt-1 font-semibold">
-                          {st.label}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
             </div>
 
           </div>
 
           {/* ========================================================= */}
-          {/* RIGHT COLUMN: Experience Open Ledger */}
+          {/* RIGHT COLUMN: Experience Open Ledger -> Education Open Ledger */}
           {/* ========================================================= */}
-          <div className="lg:col-span-3 xl:col-span-3 space-y-8">
+          <div className="lg:col-span-3 xl:col-span-3 space-y-7">
             
             {/* Experience Open Ledger */}
-            <div className="border-2 border-earth-900 bg-white p-6 shadow-[5px_5px_0_rgba(42,24,21,0.15)]">
+            <div className="border-2 border-earth-900 bg-white p-5 sm:p-6 shadow-[5px_5px_0_rgba(42,24,21,0.15)]">
               <div className="flex justify-between items-center mb-4 pb-2 border-b-2 border-earth-900">
                 <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 uppercase tracking-wider">
                   {o.experienceTitle}
@@ -381,28 +342,70 @@ export default function Overview({ content }) {
                 <span className="text-xs font-mono text-earth-600 font-bold">{o.orgPeriod || '2023–Present'}</span>
               </div>
 
-              <div className="space-y-5">
+              <div className="space-y-4">
                 {(o.experienceGroups || []).map((grp, gIdx) => (
-                  <div key={gIdx} className="space-y-2 pb-4 last:pb-0 border-b last:border-b-0 border-earth-200">
-                    <div className="text-sm sm:text-base font-mono uppercase tracking-wider text-rosewood-600 font-black">
+                  <div key={gIdx} className="space-y-1.5 pb-3.5 last:pb-0 border-b last:border-b-0 border-earth-200">
+                    <div className="text-xs sm:text-sm font-mono uppercase tracking-wider text-rosewood-600 font-black">
                       {grp.org}
                     </div>
 
-                    <div className="text-xs sm:text-sm font-bold text-earth-900">
+                    <div className="text-xs font-bold text-earth-900">
                       <span className="text-earth-500 font-normal">Position: </span>
                       {grp.role}
                     </div>
 
-                    <div className="pt-1 space-y-1.5 pl-3 border-l-2 border-earth-900">
-                      <span className="text-xs font-mono uppercase tracking-wider text-earth-600 font-bold block">
+                    <div className="pt-1 space-y-1 pl-2.5 border-l-2 border-earth-900">
+                      <span className="text-[11px] font-mono uppercase tracking-wider text-earth-600 font-bold block">
                         {grp.events.length > 1 ? 'Events:' : 'Event:'}
                       </span>
                       {grp.events.map((ev, eIdx) => (
-                        <div key={eIdx} className="flex items-baseline justify-between gap-1.5 text-xs sm:text-sm text-earth-800">
-                          <span className="font-semibold text-xs sm:text-sm leading-snug">• {ev.name}</span>
-                          <span className="font-mono text-xs text-earth-600 shrink-0 font-bold">· {ev.year}</span>
+                        <div key={eIdx} className="flex items-baseline justify-between gap-1 text-xs text-earth-800">
+                          <span className="font-semibold leading-snug">• {ev.name}</span>
+                          <span className="font-mono text-[11px] text-earth-600 shrink-0 font-bold">· {ev.year}</span>
                         </div>
                       ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Education Open Ledger: DIRECTLY BELOW EXPERIENCE IN COLUMN 3 */}
+            <div className="border-2 border-earth-900 bg-white p-5 sm:p-6 shadow-[5px_5px_0_rgba(42,24,21,0.15)]">
+              <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 uppercase tracking-wider mb-4 pb-2 border-b-2 border-earth-900">
+                {o.educationTitle}
+              </h3>
+
+              <div className="space-y-3.5">
+                {o.eduItems.map((edu, idx) => (
+                  <div 
+                    key={idx} 
+                    className={`p-3.5 border-2 text-xs sm:text-sm space-y-1.5 ${
+                      edu.highlight 
+                        ? 'bg-[#FAF0F1] border-rosewood-500' 
+                        : 'bg-paper-100 border-earth-400'
+                    }`}
+                  >
+                    <div className="flex justify-between items-center">
+                      <span className={`font-mono text-xs font-bold px-2 py-0.5 ${
+                        edu.highlight ? 'bg-rosewood-600 text-white' : 'bg-earth-800 text-paper-50'
+                      }`}>
+                        {edu.period}
+                      </span>
+                      {edu.highlight && (
+                        <span className="text-xs uppercase font-black text-rosewood-600 tracking-wider">
+                          Current Degree
+                        </span>
+                      )}
+                    </div>
+                    <div className="font-black text-earth-900 text-sm sm:text-base pt-0.5 font-editorial-serif leading-snug">
+                      {edu.school}
+                    </div>
+                    <div className="text-earth-800 font-semibold text-xs">
+                      {edu.major}
+                    </div>
+                    <div className="text-xs text-earth-600 font-mono font-medium">
+                      {edu.status}
                     </div>
                   </div>
                 ))}
