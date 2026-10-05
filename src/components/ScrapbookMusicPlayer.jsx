@@ -214,14 +214,6 @@ export default function ScrapbookMusicPlayer() {
                 {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
               </button>
 
-              {/* Time Display */}
-              <div className="font-mono text-xs sm:text-sm font-bold text-earth-900 bg-white border border-earth-900 px-2.5 py-1 shadow-2xs tabular-nums shrink-0">
-                {formatTime(currentTime)}
-                {duration > 0 && (
-                  <span className="text-earth-500 font-normal"> / {formatTime(duration)}</span>
-                )}
-              </div>
-
             </div>
 
           </div>
