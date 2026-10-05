@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Play, Pause, Music, Volume2, VolumeX, Sparkles, Disc } from 'lucide-react';
+import { Play, Pause, Music, Volume2, VolumeX } from 'lucide-react';
 
 export default function ScrapbookMusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -68,12 +68,13 @@ export default function ScrapbookMusicPlayer() {
     return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
   };
 
-  // 36 bars representing equalizer waveform echoing the reference image
+  // 42 bars representing equalizer waveform echoing the reference image
   // Each bar has varied height and responsive animated delays
   const waveformHeights = [
     35, 60, 45, 80, 50, 70, 90, 65, 40, 85, 100, 75,
     55, 90, 70, 45, 80, 95, 60, 40, 75, 85, 50, 65,
-    90, 75, 60, 85, 45, 70, 95, 80, 55, 65, 40, 50
+    90, 75, 60, 85, 45, 70, 95, 80, 55, 65, 40, 50,
+    75, 90, 60, 45, 70, 55
   ];
 
   return (
@@ -84,12 +85,12 @@ export default function ScrapbookMusicPlayer() {
       {/* Hidden functional audio element */}
       <audio ref={audioRef} src="/music.mp3" preload="metadata" />
 
-      {/* Main Music Player Envelope / Scrapbook Insert */}
-      <div className="relative max-w-4xl mx-auto">
+      {/* Main Music Player Envelope / Scrapbook Insert: Extended horizontally to max-w-6xl */}
+      <div className="relative max-w-5xl xl:max-w-6xl mx-auto">
         
         {/* Layer 0: Slightly offset scrapbook paper underneath for physical depth */}
         <div 
-          className="absolute inset-0 bg-[#EFE6D8] border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.2)] transform translate-x-1.5 translate-y-1.5 sm:translate-x-2.5 sm:translate-y-2.5 rotate-[-0.6deg] pointer-events-none transition-transform duration-300" 
+          className="absolute inset-0 bg-[#EFE6D8] border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.2)] transform translate-x-1.5 translate-y-1.5 sm:translate-x-2.5 sm:translate-y-2.5 rotate-[-0.5deg] pointer-events-none transition-transform duration-300" 
         />
 
         {/* Layer 1: Tape strip pinned at the top left edge */}
@@ -104,16 +105,16 @@ export default function ScrapbookMusicPlayer() {
           </svg>
         </div>
 
-        {/* Layer 2: Main Player Card */}
-        <div className="relative bg-[#FAF6F0] border-2 border-earth-900 p-4 sm:p-5 md:p-6 shadow-[5px_5px_0_rgba(42,24,21,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[7px_7px_0_rgba(42,24,21,0.22)]">
+        {/* Layer 2: Main Player Card with comfortable horizontal padding (px-6 sm:px-8 md:px-10) */}
+        <div className="relative bg-[#FAF6F0] border-2 border-earth-900 py-3.5 sm:py-4 px-5 sm:px-8 md:px-10 shadow-[5px_5px_0_rgba(42,24,21,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[7px_7px_0_rgba(42,24,21,0.22)]">
           
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-8">
             
-            {/* LEFT SECTION: Scrapbook Vinyl / Artwork Frame */}
-            <div className="flex items-center gap-3.5 sm:gap-4 w-full md:w-auto shrink-0">
+            {/* LEFT SECTION: Scrapbook Vinyl + Introductory Sentence + Title */}
+            <div className="flex items-center gap-3.5 sm:gap-4.5 w-full lg:w-auto shrink-0">
               
               {/* Album Art Frame with paper border and spinning vinyl disc interaction */}
-              <div className="relative w-16 h-16 sm:w-20 sm:h-20 shrink-0">
+              <div className="relative w-15 h-15 sm:w-16 sm:h-16 shrink-0">
                 {/* Paper polaroid backing */}
                 <div className="absolute inset-0 bg-white border border-earth-900 shadow-xs rotate-[-3deg]" />
                 
@@ -133,7 +134,7 @@ export default function ScrapbookMusicPlayer() {
                     <div className="absolute inset-3 rounded-full border border-earth-700/50" />
                     
                     {/* Center label */}
-                    <div className="w-6 h-6 rounded-full bg-[#E26D5C] border border-white/60 flex items-center justify-center shadow-xs">
+                    <div className="w-5 h-5 rounded-full bg-[#E26D5C] border border-white/60 flex items-center justify-center shadow-xs">
                       <div className="w-1.5 h-1.5 rounded-full bg-earth-900" />
                     </div>
                   </div>
@@ -141,33 +142,40 @@ export default function ScrapbookMusicPlayer() {
 
                 {/* Mini music note badge */}
                 <div className="absolute -bottom-1 -right-1 bg-[#FEE78A] text-earth-900 border border-earth-900 p-0.5 rounded-xs shadow-2xs">
-                  <Music size={11} className="stroke-[2.5]" />
+                  <Music size={10} className="stroke-[2.5]" />
                 </div>
               </div>
 
-              {/* Track Metadata & Title */}
+              {/* Track Metadata & Title Hierarchy */}
               <div className="min-w-0 flex-1">
-                <div className="flex items-center gap-1.5 font-mono text-[11px] sm:text-xs font-bold text-rosewood-600 tracking-wider uppercase">
-                  <span>//</span>
-                  <span className="bg-[#FAF0E6] px-1.5 py-0.5 border border-earth-900/30 text-earth-800">
-                    music.mp3
-                  </span>
+                {/* Introductory Sentence: Cute editorial note before title */}
+                <div className="flex items-center gap-1.5 text-xs sm:text-sm font-editorial-script text-rosewood-700 font-bold tracking-wide">
+                  <span className="text-accent-terracotta">♪</span>
+                  <span>A little soundtrack for the pages ahead</span>
+                  <span className="text-earth-400">⟶</span>
                 </div>
                 
-                <h3 className="font-editorial-serif font-black text-base sm:text-lg lg:text-xl text-earth-900 tracking-tight leading-tight mt-0.5 truncate">
-                  Personal Soundtrack
+                {/* Title */}
+                <h3 className="font-editorial-serif font-black text-lg sm:text-xl lg:text-2xl text-earth-900 tracking-tight leading-tight mt-0.5 truncate">
+                  A Tiny Tune ♫
                 </h3>
 
-                <p className="text-[10px] sm:text-[11px] font-mono text-earth-600 tracking-wide mt-0.5 truncate">
-                  BITRATE: 320KBPS · VIBE: EDITORIAL NOTEBOOK & STUDY GROOVE
-                </p>
+                {/* File tag */}
+                <div className="flex items-center gap-2 mt-1">
+                  <span className="font-mono text-[10px] sm:text-[11px] font-bold text-earth-600 bg-[#FAF0E6] px-1.5 py-0.5 border border-earth-900/25">
+                    // music.mp3
+                  </span>
+                  <span className="text-[10px] sm:text-[11px] font-mono text-earth-500 tracking-wider uppercase hidden sm:inline">
+                    320KBPS · STUDY GROOVE
+                  </span>
+                </div>
               </div>
             </div>
 
             {/* CENTER SECTION: Scrapbook Waveform Equalizer */}
-            <div className="w-full md:flex-1 max-w-md px-1 sm:px-2 flex flex-col justify-center">
+            <div className="w-full lg:flex-1 max-w-lg px-1 sm:px-2 flex flex-col justify-center">
               <div 
-                className="h-10 sm:h-12 bg-[#F3EDE2] border border-earth-900/40 rounded-xs px-2.5 sm:px-3 flex items-center justify-between gap-1 shadow-inner overflow-hidden"
+                className="h-10 sm:h-11 bg-[#F3EDE2] border border-earth-900/40 rounded-xs px-2.5 sm:px-3 flex items-center justify-between gap-1 shadow-inner overflow-hidden"
                 title={isPlaying ? "Playing audio waveform" : "Paused waveform"}
               >
                 {waveformHeights.map((h, i) => (
@@ -185,14 +193,14 @@ export default function ScrapbookMusicPlayer() {
               </div>
             </div>
 
-            {/* RIGHT SECTION: Controls & Time Display */}
-            <div className="flex items-center justify-between md:justify-end gap-3 sm:gap-4 w-full md:w-auto shrink-0">
+            {/* RIGHT SECTION: Controls & Time Display (With comfortable right-side padding) */}
+            <div className="flex items-center justify-between lg:justify-end gap-3.5 sm:gap-5 w-full lg:w-auto shrink-0 pr-1 sm:pr-2">
               
-              {/* Play / Pause Main Interactive Button */}
+              {/* Play / Pause Main Interactive Red/Terracotta Circular Button */}
               <button
                 type="button"
                 onClick={togglePlay}
-                className="relative group flex items-center justify-center w-12 h-12 sm:w-13 sm:h-13 bg-[#E26D5C] hover:bg-[#D05C4B] active:translate-y-0.5 text-white border-2 border-earth-900 shadow-[3px_3px_0_rgba(42,24,21,0.25)] rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-earth-900 focus:ring-offset-2"
+                className="relative group flex items-center justify-center w-12 h-12 sm:w-13 sm:h-13 bg-[#E26D5C] hover:bg-[#D05C4B] active:translate-y-0.5 text-white border-2 border-earth-900 shadow-[3px_3px_0_rgba(42,24,21,0.25)] rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-earth-900 focus:ring-offset-2 shrink-0 cursor-pointer"
                 aria-label={isPlaying ? 'Pause music' : 'Play music'}
               >
                 {isPlaying ? (
@@ -206,7 +214,7 @@ export default function ScrapbookMusicPlayer() {
               <button
                 type="button"
                 onClick={toggleMute}
-                className="p-2 text-earth-700 hover:text-earth-950 hover:bg-paper-200 border border-earth-900/30 rounded-xs transition-colors focus:outline-none"
+                className="p-2 text-earth-700 hover:text-earth-950 hover:bg-paper-200 border border-earth-900/30 rounded-xs transition-colors focus:outline-none shrink-0"
                 aria-label={isMuted ? 'Unmute music' : 'Mute music'}
                 title={isMuted ? 'Unmute' : 'Mute'}
               >
@@ -214,7 +222,7 @@ export default function ScrapbookMusicPlayer() {
               </button>
 
               {/* Time Display */}
-              <div className="font-mono text-xs sm:text-sm font-bold text-earth-900 bg-white border border-earth-900 px-2.5 py-1 shadow-2xs tabular-nums">
+              <div className="font-mono text-xs sm:text-sm font-bold text-earth-900 bg-white border border-earth-900 px-2.5 py-1 shadow-2xs tabular-nums shrink-0">
                 {formatTime(currentTime)}
                 {duration > 0 && (
                   <span className="text-earth-500 font-normal"> / {formatTime(duration)}</span>
@@ -226,7 +234,7 @@ export default function ScrapbookMusicPlayer() {
           </div>
 
           {/* Bottom subtle handwritten note */}
-          <div className="mt-2.5 pt-2 border-t border-earth-300/80 flex items-center justify-between text-xs font-editorial-script text-earth-700">
+          <div className="mt-2.5 pt-1.5 border-t border-earth-300/80 flex items-center justify-between text-xs font-editorial-script text-earth-700">
             <span>~ background listening while exploring portfolio ~</span>
             <span className="font-mono text-[10px] text-earth-500 uppercase tracking-widest hidden sm:inline">
               TRACK NO. 01 · CASSETTE INSERT
