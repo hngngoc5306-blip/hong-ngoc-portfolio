@@ -52,10 +52,10 @@ export const content = {
       
       toolsTitle: 'Tools',
       tools: [
-        'SmartPLS',
-        'SPSS',
-        'Antigravity',
-        'AI-Assisted Development'
+        { name: 'SmartPLS', icon: '/assets/smartpls.png' },
+        { name: 'SPSS', icon: '/assets/spss.svg' },
+        { name: 'Antigravity', icon: '/assets/antigravity.png' },
+        { name: 'Canva', icon: '/assets/canva.svg' }
       ],
 
       languageTitle: 'Language',

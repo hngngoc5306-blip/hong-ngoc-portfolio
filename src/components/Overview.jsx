@@ -271,14 +271,26 @@ export default function Overview({ content }) {
                     {o.toolsTitle}
                   </h3>
                   <div className="flex flex-wrap gap-2 pt-2">
-                    {o.tools.map((t, idx) => (
-                      <span 
-                        key={idx} 
-                        className="editorial-tag text-earth-900 bg-white font-mono text-xs sm:text-sm font-bold border border-earth-900 shadow-2xs"
-                      >
-                        {t}
-                      </span>
-                    ))}
+                    {o.tools.map((t, idx) => {
+                      const name = typeof t === 'string' ? t : t.name;
+                      const icon = typeof t === 'object' && t.icon ? t.icon : null;
+                      return (
+                        <span 
+                          key={idx} 
+                          className="editorial-tag text-earth-900 bg-white font-mono text-xs sm:text-sm font-bold border border-earth-900 shadow-2xs inline-flex items-center gap-2 py-1 px-2.5"
+                        >
+                          {icon && (
+                            <img 
+                              src={icon} 
+                              alt="" 
+                              className="w-4 h-4 object-contain shrink-0" 
+                              loading="lazy"
+                            />
+                          )}
+                          <span>{name}</span>
+                        </span>
+                      );
+                    })}
                   </div>
                 </div>
 
