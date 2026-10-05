@@ -97,7 +97,7 @@ export const content = {
           org: 'Highschool Music Showdown',
           role: 'Volunteer Event Coordinator',
           events: [
-            { name: 'The Finalé', year: '2023' }
+            { name: 'The Finale', year: '2023' }
           ]
         },
         {
@@ -275,7 +275,7 @@ export const content = {
           status: 'Accepted',
           statusColor: 'bg-amber-100 text-amber-800 border-amber-300',
           title: 'The Integrated Impact of AI and Last-Mile Logistics Service Quality on Customer Loyalty: Evidence from Young Urban Consumers in Vietnam\'s Fresh E-commerce',
-          conference: 'Hội thảo quốc tế Sinh viên nghiên cứu khoa học các Trường Đại học Kinh tế và Kinh doanh (SR-ICYREB) 2026',
+          conference: 'International Conference for Young Researchers in Economics and Business (SR-ICYREB) 2026',
           year: '2026',
           authorPosition: '4th author',
           method: 'PLS-SEM',
@@ -320,7 +320,7 @@ export const content = {
         {
           period: '2024 – Expected 2028',
           school: 'Foreign Trade University (FTU)',
-          schoolSub: 'Trường Đại học Ngoại thương',
+          schoolSub: 'Foreign Trade University',
           faculty: 'College of Economics and Public Management',
           major: 'International Business Economics',
           location: 'Hanoi, Vietnam',
@@ -331,7 +331,7 @@ export const content = {
         {
           period: '2021 – 2024',
           school: 'High School for Gifted Students',
-          schoolSub: 'THPT Chuyên Đại học Sư phạm Hà Nội',
+          schoolSub: 'High School for Gifted Students, HNUE',
           faculty: 'Hanoi University of Education',
           major: 'Specialized High School Curriculum',
           location: 'Hanoi, Vietnam',

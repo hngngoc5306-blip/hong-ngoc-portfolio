@@ -98,7 +98,7 @@ export default function Experience({ content }) {
                   <span className="font-mono text-xs sm:text-sm font-black uppercase tracking-wider text-earth-900">
                     2023 · Highschool Music Showdown
                   </span>
-                  <span className="font-mono text-[10px] bg-earth-900 text-white px-2 py-0.5 font-bold">The Finalé</span>
+                  <span className="font-mono text-[10px] bg-earth-900 text-white px-2 py-0.5 font-bold">The Finale</span>
                 </div>
                 <div className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900">
                   Volunteer Event Coordinator
@@ -359,7 +359,7 @@ export default function Experience({ content }) {
 
                         <div className="border-b border-rosewood-900/20 pb-1 mb-2">
                           <span className="font-editorial-serif font-black text-2xl text-earth-950 block leading-none">
-                            700+ KHÁN GIẢ
+                            700+ ATTENDEES
                           </span>
                         </div>
 
@@ -563,7 +563,7 @@ export default function Experience({ content }) {
 
                         <div className="border-b border-rosewood-900/20 pb-1 mb-2">
                           <span className="font-editorial-serif font-black text-xl sm:text-2xl text-earth-950 block leading-tight">
-                            TIMELINE & SÂN KHẤU
+                            TIMELINE & STAGE FLOW
                           </span>
                         </div>
 

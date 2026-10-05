@@ -69,7 +69,7 @@ export default function Navbar({ content }) {
             className="text-left group flex items-center gap-2 focus:outline-none"
           >
             <span className="font-editorial-serif font-bold text-lg text-earth-800 tracking-tight group-hover:text-rosewood-600 transition-colors">
-              Hồng Ngọc
+              Hong Ngoc
             </span>
             <span className="hidden sm:inline-block text-xs uppercase tracking-wider font-semibold text-earth-500/80 border-l border-earth-300 pl-2">
               Portfolio
