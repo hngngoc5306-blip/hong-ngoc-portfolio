@@ -567,91 +567,94 @@
   opacity: 0;
   will-change: transform, opacity;
   transition-property: opacity, transform;
-  transition-duration: 750ms;
+  /* Smooth gentle exit reset (350ms, 0 delay on exit) */
+  transition-duration: 350ms;
+  transition-delay: 0ms !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Re-entrance state: applies custom staggered entrance duration & delays */
+[data-reveal].is-revealed {
+  opacity: 1;
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* 1. Heading slide-in from bottom with slight optical zoom */
 [data-reveal="heading"] {
   transform: translateY(32px);
-  transition-duration: 800ms;
 }
 [data-reveal="heading"].is-revealed {
-  opacity: 1;
   transform: translateY(0);
+  transition-duration: 800ms;
 }
 
 /* 2. Text gentle upward fade */
 [data-reveal="text"] {
   transform: translateY(20px);
-  transition-duration: 700ms;
 }
 [data-reveal="text"].is-revealed {
-  opacity: 1;
   transform: translateY(0);
+  transition-duration: 700ms;
 }
 
 /* 3. Paper Sheet placement (physical drop with subtle rotation settle) */
 [data-reveal="paper"] {
   transform: translateY(36px) rotate(-1.5deg) scale(0.98);
-  transition-duration: 900ms;
 }
 [data-reveal="paper"].is-revealed {
-  opacity: 1;
   transform: translateY(0) rotate(0deg) scale(1);
+  transition-duration: 900ms;
 }
 
 /* 4. Photo / Specimen frame (slide & settle) */
 [data-reveal="photo"] {
   transform: translateY(40px) scale(0.96) rotate(1.2deg);
-  transition-duration: 850ms;
 }
 [data-reveal="photo"].is-revealed {
-  opacity: 1;
   transform: translateY(0) scale(1) rotate(0deg);
+  transition-duration: 850ms;
 }
 
 /* 5. Sticker / Washi Tape (pop & tactile squish) */
 [data-reveal="sticker"] {
   transform: translateY(18px) scale(0.88) rotate(-3deg);
-  transition-duration: 650ms;
-  transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); /* Bouncy spring */
 }
 [data-reveal="sticker"].is-revealed {
-  opacity: 1;
   transform: translateY(0) scale(1) rotate(0deg);
+  transition-duration: 650ms;
+  transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); /* Bouncy spring */
 }
 
 /* 6. Stamp / Tag (firm stamp imprint effect) */
 [data-reveal="stamp"] {
   transform: scale(1.18) rotate(3deg);
-  transition-duration: 600ms;
 }
 [data-reveal="stamp"].is-revealed {
-  opacity: 1;
   transform: scale(1) rotate(0deg);
+  transition-duration: 600ms;
 }
 
 /* 7. Line / Rule progressive expansion */
 [data-reveal="line"] {
   transform: scaleX(0);
   transform-origin: left center;
-  transition-duration: 900ms;
 }
 [data-reveal="line"].is-revealed {
-  opacity: 1;
   transform: scaleX(1);
+  transition-duration: 900ms;
 }
 
-/* Stagger delay utility classes */
-.delay-100 { transition-delay: 100ms; }
-.delay-150 { transition-delay: 150ms; }
-.delay-200 { transition-delay: 200ms; }
-.delay-250 { transition-delay: 250ms; }
-.delay-300 { transition-delay: 300ms; }
-.delay-400 { transition-delay: 400ms; }
-.delay-500 { transition-delay: 500ms; }
-.delay-600 { transition-delay: 600ms; }
+/* Stagger delay utility classes only applied when entering (.is-revealed) */
+[data-reveal].is-revealed.delay-75 { transition-delay: 75ms !important; }
+[data-reveal].is-revealed.delay-100 { transition-delay: 100ms !important; }
+[data-reveal].is-revealed.delay-150 { transition-delay: 150ms !important; }
+[data-reveal].is-revealed.delay-200 { transition-delay: 200ms !important; }
+[data-reveal].is-revealed.delay-250 { transition-delay: 250ms !important; }
+[data-reveal].is-revealed.delay-300 { transition-delay: 300ms !important; }
+[data-reveal].is-revealed.delay-350 { transition-delay: 350ms !important; }
+[data-reveal].is-revealed.delay-400 { transition-delay: 400ms !important; }
+[data-reveal].is-revealed.delay-500 { transition-delay: 500ms !important; }
+[data-reveal].is-revealed.delay-600 { transition-delay: 600ms !important; }
 
 /* Interactive Tactile Scrapbook Element Hovers */
 .scrapbook-interactive-star {

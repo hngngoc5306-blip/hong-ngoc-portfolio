@@ -189,11 +189,12 @@ export default function Experience({ content }) {
                     
                     {/* Primary Hero Photograph — Tilted Left (-2 deg) with Washi Tape */}
                     <div 
-                      className="relative z-15 w-full max-w-[270px] sm:max-w-[300px] bg-white p-2.5 pb-7 border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.18)] transform -rotate-2 hover:rotate-0 transition-transform duration-300 cursor-pointer group"
+                      data-reveal="photo"
+                      className="delay-150 relative z-15 w-full max-w-[270px] sm:max-w-[300px] bg-white p-2.5 pb-7 border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.18)] transform -rotate-2 hover:rotate-0 transition-transform duration-300 cursor-pointer group"
                       onClick={() => setSelectedPhoto({ src: `/assets/${tatakeEvent.images[0]}`, title: `${tatakeEvent.title} — Main Concert Hall Stage & Audience` })}
                     >
                       {/* Translucent Washi tape at top */}
-                      <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-32 h-7 opacity-90 pointer-events-none rotate-1">
+                      <div data-reveal="sticker" className="delay-200 absolute -top-3.5 left-1/2 -translate-x-1/2 w-32 h-7 opacity-90 pointer-events-none rotate-1">
                         <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
                       </div>
 
@@ -216,7 +217,8 @@ export default function Experience({ content }) {
 
                     {/* Secondary Supporting Photograph — Positioned lower and slightly behind, Tilted Right (+3 deg) */}
                     <div 
-                      className="relative -mt-8 ml-auto w-36 sm:w-44 bg-white p-2 pb-5 border-2 border-earth-900 shadow-[5px_5px_0_rgba(42,24,21,0.15)] transform rotate-3 hover:rotate-0 transition-transform duration-300 cursor-pointer z-20 group"
+                      data-reveal="photo"
+                      className="delay-250 relative -mt-8 ml-auto w-36 sm:w-44 bg-white p-2 pb-5 border-2 border-earth-900 shadow-[5px_5px_0_rgba(42,24,21,0.15)] transform rotate-3 hover:rotate-0 transition-transform duration-300 cursor-pointer z-20 group"
                       onClick={() => setSelectedPhoto({ src: `/assets/${tatakeEvent.images[1]}`, title: `${tatakeEvent.title} — Backstage Operations & Team` })}
                     >
                       <div className="aspect-[4/3] bg-earth-950 overflow-hidden border border-earth-300">
@@ -234,7 +236,7 @@ export default function Experience({ content }) {
                   </div>
 
                   {/* Botanical tulip bouquet anchoring the lower left of the spread (Template Page 5 echo) */}
-                  <div className="relative pt-2">
+                  <div data-reveal="paper" className="delay-200 relative pt-2">
                     <div className="w-28 sm:w-36 -ml-2 opacity-95 pointer-events-none">
                       <img src="/assets/collage_elem_34.png" alt="Tulips collage" className="w-full h-auto object-contain filter drop-shadow-sm" />
                     </div>
@@ -275,7 +277,7 @@ export default function Experience({ content }) {
                 <div className="flex-1 p-6 sm:p-8 lg:p-10 xl:p-12 notebook-ruled space-y-7 flex flex-col justify-between bg-[#FAF6F0] relative overflow-hidden lg:pl-10">
                   
                   {/* Decorative Concert Ribbon / Pass (Template Page 5 Top-Right Ribbon Reinterpretation) */}
-                  <div className="absolute top-4 right-5 sm:right-8 z-20 flex flex-col items-center pointer-events-none transform rotate-3">
+                  <div data-reveal="sticker" className="delay-100 absolute top-4 right-5 sm:right-8 z-20 flex flex-col items-center pointer-events-none transform rotate-3">
                     <div className="bg-[#FF007F] text-white font-mono text-[10px] font-black uppercase tracking-widest px-3 py-1 shadow-xs border border-earth-900">
                       LIVE ACCESS PASS
                     </div>
@@ -285,7 +287,7 @@ export default function Experience({ content }) {
                   <div className="space-y-6">
                     
                     {/* Large Editorial Title (Occupying Upper-Right, Inspired by "Educational Attainment") */}
-                    <div className="space-y-1 pt-1 pr-24 sm:pr-32">
+                    <div data-reveal="heading" className="delay-150 space-y-1 pt-1 pr-24 sm:pr-32">
                       <span className="font-mono text-xs uppercase tracking-widest text-earth-600 font-black block">
                         EVENT EXPERIENCE // LOG 03
                       </span>
@@ -305,7 +307,7 @@ export default function Experience({ content }) {
                     <div className="relative pt-2 pb-1 flex flex-col sm:flex-row items-center sm:items-start gap-4 lg:gap-6 xl:gap-8">
                       
                       {/* YELLOW PAPER NOTE: 2025 & Role (Replacing Education Note 1) */}
-                      <div className="w-full sm:w-[240px] xl:w-[260px] template-sticky-yellow p-4 sm:p-5 border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.18)] transform -rotate-2 relative z-10 shrink-0">
+                      <div data-reveal="sticker" className="delay-200 w-full sm:w-[240px] xl:w-[260px] template-sticky-yellow p-4 sm:p-5 border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.18)] transform -rotate-2 relative z-10 shrink-0">
                         {/* Translucent washi tape at top */}
                         <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-24 h-6 opacity-85 pointer-events-none rotate-2">
                           <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
@@ -329,7 +331,7 @@ export default function Experience({ content }) {
                       </div>
 
                       {/* HAND-DRAWN ARROW: Connecting Yellow Note to Pink Note */}
-                      <div className="hidden sm:flex items-center justify-center pt-8 text-earth-900 z-20 shrink-0">
+                      <div data-reveal="line" className="delay-250 hidden sm:flex items-center justify-center pt-8 text-earth-900 z-20 shrink-0">
                         <svg width="56" height="38" viewBox="0 0 70 45" fill="none" className="filter drop-shadow-2xs">
                           {/* Smooth curved organic hand-drawn stroke */}
                           <path 
@@ -351,7 +353,7 @@ export default function Experience({ content }) {
                       </div>
 
                       {/* PINK PAPER NOTE: 700+ Audience & Operations (Replacing Education Note 2) */}
-                      <div className="w-full sm:w-[240px] xl:w-[260px] template-sticky-pink p-4 sm:p-5 border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.18)] transform rotate-2 relative z-10 shrink-0">
+                      <div data-reveal="sticker" className="delay-300 w-full sm:w-[240px] xl:w-[260px] template-sticky-pink p-4 sm:p-5 border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.18)] transform rotate-2 relative z-10 shrink-0">
                         {/* Translucent washi tape at top */}
                         <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-24 h-6 opacity-85 pointer-events-none -rotate-2">
                           <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
@@ -374,12 +376,12 @@ export default function Experience({ content }) {
                       </div>
 
                       {/* Blue Hand-Drawn Starburst marks (from Template Page 5) */}
-                      <div className="absolute -top-3 right-2 text-[#3A6878] z-20 hidden md:block animate-micro-twinkle">
+                      <div data-reveal="sticker" className="delay-350 absolute -top-3 right-2 text-[#3A6878] z-20 hidden md:block animate-micro-twinkle">
                         <svg width="38" height="38" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M12 0L14.6 8.4L23.4 8.4L16.3 13.6L19 22L12 16.8L5 22L7.7 13.6L0.6 8.4L9.4 8.4L12 0Z"/>
                         </svg>
                       </div>
-                      <div className="absolute -bottom-4 right-10 text-[#3A6878] z-20 hidden md:block">
+                      <div data-reveal="sticker" className="delay-400 absolute -bottom-4 right-10 text-[#3A6878] z-20 hidden md:block">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M12 0L14.6 8.4L23.4 8.4L16.3 13.6L19 22L12 16.8L5 22L7.7 13.6L0.6 8.4L9.4 8.4L12 0Z"/>
                         </svg>
@@ -388,7 +390,7 @@ export default function Experience({ content }) {
                     </div>
 
                     {/* FIELD NOTE: Event Description Styled as a Documentation Note */}
-                    <div className="p-4 bg-[#FAF0F1]/90 border-2 border-rosewood-400 shadow-[3px_3px_0_rgba(42,24,21,0.1)] relative">
+                    <div data-reveal="paper" className="delay-350 p-4 bg-[#FAF0F1]/90 border-2 border-rosewood-400 shadow-[3px_3px_0_rgba(42,24,21,0.1)] relative">
                       <span className="font-mono text-[10px] uppercase tracking-wider text-rosewood-700 font-black block mb-1">
                         FIELD NOTE // OPERATIONAL EXECUTION
                       </span>
@@ -509,7 +511,7 @@ export default function Experience({ content }) {
                     <div className="relative pt-2 pb-1 flex flex-col sm:flex-row items-center sm:items-start gap-4 lg:gap-6 xl:gap-8">
                       
                       {/* YELLOW PAPER NOTE: 2025 & Role */}
-                      <div className="w-full sm:w-[240px] xl:w-[260px] template-sticky-yellow p-4 sm:p-5 border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.18)] transform -rotate-2 relative z-10 shrink-0">
+                      <div data-reveal="sticker" className="delay-150 w-full sm:w-[240px] xl:w-[260px] template-sticky-yellow p-4 sm:p-5 border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.18)] transform -rotate-2 relative z-10 shrink-0">
                         {/* Translucent washi tape at top */}
                         <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-24 h-6 opacity-85 pointer-events-none rotate-2">
                           <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
@@ -533,7 +535,7 @@ export default function Experience({ content }) {
                       </div>
 
                       {/* HAND-DRAWN ARROW: Connecting Yellow Note to Pink Note */}
-                      <div className="hidden sm:flex items-center justify-center pt-8 text-earth-900 z-20 shrink-0">
+                      <div data-reveal="line" className="delay-200 hidden sm:flex items-center justify-center pt-8 text-earth-900 z-20 shrink-0">
                         <svg width="56" height="38" viewBox="0 0 70 45" fill="none" className="filter drop-shadow-2xs">
                           {/* Smooth curved organic hand-drawn stroke */}
                           <path 
@@ -555,7 +557,7 @@ export default function Experience({ content }) {
                       </div>
 
                       {/* PINK PAPER NOTE: Stage Flow & Cue Operations */}
-                      <div className="w-full sm:w-[240px] xl:w-[260px] template-sticky-pink p-4 sm:p-5 border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.18)] transform rotate-2 relative z-10 shrink-0">
+                      <div data-reveal="sticker" className="delay-250 w-full sm:w-[240px] xl:w-[260px] template-sticky-pink p-4 sm:p-5 border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.18)] transform rotate-2 relative z-10 shrink-0">
                         {/* Translucent washi tape at top */}
                         <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-24 h-6 opacity-85 pointer-events-none -rotate-2">
                           <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
@@ -578,12 +580,12 @@ export default function Experience({ content }) {
                       </div>
 
                       {/* Blue Hand-Drawn Starburst marks */}
-                      <div className="absolute -top-3 right-4 text-[#3A6878] z-20 hidden md:block animate-micro-twinkle">
+                      <div data-reveal="sticker" className="delay-300 absolute -top-3 right-4 text-[#3A6878] z-20 hidden md:block animate-micro-twinkle">
                         <svg width="38" height="38" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M12 0L14.6 8.4L23.4 8.4L16.3 13.6L19 22L12 16.8L5 22L7.7 13.6L0.6 8.4L9.4 8.4L12 0Z"/>
                         </svg>
                       </div>
-                      <div className="absolute -bottom-4 right-12 text-[#3A6878] z-20 hidden md:block">
+                      <div data-reveal="sticker" className="delay-350 absolute -bottom-4 right-12 text-[#3A6878] z-20 hidden md:block">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M12 0L14.6 8.4L23.4 8.4L16.3 13.6L19 22L12 16.8L5 22L7.7 13.6L0.6 8.4L9.4 8.4L12 0Z"/>
                         </svg>
@@ -592,7 +594,7 @@ export default function Experience({ content }) {
                     </div>
 
                     {/* FIELD NOTE: Event Description Styled as a Documentation Note */}
-                    <div className="p-4 bg-[#FAF0F1]/90 border-2 border-rosewood-400 shadow-[3px_3px_0_rgba(42,24,21,0.1)] relative">
+                    <div data-reveal="paper" className="delay-300 p-4 bg-[#FAF0F1]/90 border-2 border-rosewood-400 shadow-[3px_3px_0_rgba(42,24,21,0.1)] relative">
                       <span className="font-mono text-[10px] uppercase tracking-wider text-rosewood-700 font-black block mb-1">
                         FIELD NOTE // BACKSTAGE OPERATIONS & PROTOCOLS
                       </span>
@@ -678,11 +680,12 @@ export default function Experience({ content }) {
                     
                     {/* Primary Hero Photograph — Tilted Right (+2 deg) with Washi Tape (Mirrored from Tatake's -2 deg) */}
                     <div 
-                      className="relative z-15 w-full max-w-[270px] sm:max-w-[300px] bg-white p-2.5 pb-7 border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.18)] transform rotate-2 hover:rotate-0 transition-transform duration-300 cursor-pointer group"
+                      data-reveal="photo"
+                      className="delay-150 relative z-15 w-full max-w-[270px] sm:max-w-[300px] bg-white p-2.5 pb-7 border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.18)] transform rotate-2 hover:rotate-0 transition-transform duration-300 cursor-pointer group"
                       onClick={() => setSelectedPhoto({ src: `/assets/${toTheLineEvent.images[0]}`, title: `${toTheLineEvent.title} — Full Symphonic Hall & Production` })}
                     >
                       {/* Translucent Washi tape at top */}
-                      <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-32 h-7 opacity-90 pointer-events-none -rotate-1">
+                      <div data-reveal="sticker" className="delay-200 absolute -top-3.5 left-1/2 -translate-x-1/2 w-32 h-7 opacity-90 pointer-events-none -rotate-1">
                         <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
                       </div>
 
@@ -705,7 +708,8 @@ export default function Experience({ content }) {
 
                     {/* Secondary Supporting Photograph — Positioned lower and offset to the left, Tilted Left (-3 deg) */}
                     <div 
-                      className="relative -mt-8 mr-auto w-36 sm:w-44 bg-white p-2 pb-5 border-2 border-earth-900 shadow-[5px_5px_0_rgba(42,24,21,0.15)] transform -rotate-3 hover:rotate-0 transition-transform duration-300 cursor-pointer z-20 group"
+                      data-reveal="photo"
+                      className="delay-250 relative -mt-8 mr-auto w-36 sm:w-44 bg-white p-2 pb-5 border-2 border-earth-900 shadow-[5px_5px_0_rgba(42,24,21,0.15)] transform -rotate-3 hover:rotate-0 transition-transform duration-300 cursor-pointer z-20 group"
                       onClick={() => setSelectedPhoto({ src: `/assets/${toTheLineEvent.images[1]}`, title: `${toTheLineEvent.title} — Backstage Operations & Artists` })}
                     >
                       <div className="aspect-[4/3] bg-earth-950 overflow-hidden border border-earth-300">

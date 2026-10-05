@@ -131,7 +131,7 @@ export default function Overview({ content }) {
             </div>
 
             {/* Direct Connect Channels (Rectangular postal styling) */}
-            <div className="space-y-3 pt-2">
+            <div data-reveal="sticker" className="delay-200 space-y-3 pt-2">
               <div className="flex items-center gap-2 pb-1.5 border-b border-earth-300">
                 <span className="font-mono text-xs font-bold uppercase tracking-wider text-earth-900 bg-[#EBBEC3]/70 px-2.5 py-1 border border-earth-900/30">
                   {o.connect}
@@ -171,10 +171,10 @@ export default function Overview({ content }) {
             </div>
 
             {/* Me in 3 words: Torn Notebook Lined Paper Sheet with Tape (Moved to Column 1 directly below Connect) */}
-            <div className="pt-2 relative">
+            <div data-reveal="paper" className="delay-250 pt-2 relative">
               <div className="relative p-5 sm:p-6 bg-white border-2 border-earth-400 shadow-[5px_5px_0_rgba(42,24,21,0.12)] notebook-ruled">
                 {/* Washi tape at corner */}
-                <div className="absolute -top-3.5 right-6 w-24 sm:w-28 h-6 opacity-85 pointer-events-none rotate-2">
+                <div data-reveal="sticker" className="delay-300 absolute -top-3.5 right-6 w-24 sm:w-28 h-6 opacity-85 pointer-events-none rotate-2">
                   <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
                 </div>
 

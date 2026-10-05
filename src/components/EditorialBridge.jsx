@@ -81,7 +81,8 @@ export default function EditorialBridge({
 
       {/* Crossing Washi Tape bridging the seam */}
       <div 
-        className="absolute top-1/2 left-8 sm:left-24 lg:left-36 -translate-y-1/2 w-28 sm:w-36 h-7 sm:h-8 shadow-sm pointer-events-none"
+        data-reveal="sticker"
+        className="delay-100 absolute top-1/2 left-8 sm:left-24 lg:left-36 -translate-y-1/2 w-28 sm:w-36 h-7 sm:h-8 shadow-sm pointer-events-none"
         style={{ transform: `translateY(-50%) rotate(${tapeAngle})` }}
       >
         <div 
@@ -96,7 +97,7 @@ export default function EditorialBridge({
 
       {/* Optional Handwritten annotation across the bridge */}
       {handwriting && (
-        <div className="absolute top-1/2 right-12 sm:right-28 lg:right-44 -translate-y-1/2 hidden md:block">
+        <div data-reveal="text" className="delay-200 absolute top-1/2 right-12 sm:right-28 lg:right-44 -translate-y-1/2 hidden md:block">
           <span className="font-editorial-script text-base sm:text-lg lg:text-xl text-earth-800 font-bold tracking-wide transform rotate-1 inline-block drop-shadow-xs">
             {handwriting}
           </span>
@@ -105,7 +106,7 @@ export default function EditorialBridge({
 
       {/* Optional Vintage Stamp or Badge across boundary */}
       {stampText && (
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden sm:block">
+        <div data-reveal="stamp" className="delay-150 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden sm:block">
           <span className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-earth-800 bg-[#FAF6F0] px-3 py-1 border border-earth-900/30 shadow-[2px_2px_0_rgba(42,24,21,0.15)] transform -rotate-1">
             {stampText}
           </span>
@@ -114,7 +115,8 @@ export default function EditorialBridge({
 
       {/* Decorative Floating Doodle Star */}
       <div 
-        className="absolute top-1/2 right-6 sm:right-12 -translate-y-1/2 hidden sm:block animate-micro-twinkle"
+        data-reveal="sticker"
+        className="delay-250 absolute top-1/2 right-6 sm:right-12 -translate-y-1/2 hidden sm:block animate-micro-twinkle"
         style={{ color: starColor }}
       >
         <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">

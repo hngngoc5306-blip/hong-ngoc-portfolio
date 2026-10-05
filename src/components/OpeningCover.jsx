@@ -60,7 +60,8 @@ export default function OpeningCover({ content, onScrollDown }) {
           */}
           {/* Paintbrush Micro-sway (Left edge) */}
           <div 
-            className="absolute left-[3.5%] top-[38%] w-[10%] h-[38%] pointer-events-none z-15 hidden sm:block animate-cover-brush group"
+            data-reveal="photo"
+            className="delay-150 absolute left-[3.5%] top-[38%] w-[10%] h-[38%] pointer-events-none z-15 hidden sm:block animate-cover-brush group"
             style={{ transformOrigin: 'bottom center' }}
           >
             <img 
@@ -72,7 +73,8 @@ export default function OpeningCover({ content, onScrollDown }) {
 
           {/* Yellow Star Doodle Micro-spin (Top Center Star) */}
           <div 
-            className="absolute left-[44%] top-[30%] w-[9%] h-[15%] pointer-events-none z-15 hidden sm:block animate-micro-twinkle"
+            data-reveal="sticker"
+            className="delay-100 absolute left-[44%] top-[30%] w-[9%] h-[15%] pointer-events-none z-15 hidden sm:block animate-micro-twinkle"
           >
             <svg viewBox="0 0 100 100" className="w-full h-full fill-yellow-400/90 drop-shadow-xs">
               <path d="M50 0 L58 35 L95 20 L68 50 L95 80 L58 65 L50 100 L42 65 L5 80 L32 50 L5 20 L42 35 Z" />
@@ -81,7 +83,8 @@ export default function OpeningCover({ content, onScrollDown }) {
 
           {/* Yellow Star Doodle Micro-spin (Bottom Right Star) */}
           <div 
-            className="absolute left-[78%] top-[68%] w-[8%] h-[14%] pointer-events-none z-15 hidden sm:block animate-cover-star"
+            data-reveal="sticker"
+            className="delay-250 absolute left-[78%] top-[68%] w-[8%] h-[14%] pointer-events-none z-15 hidden sm:block animate-cover-star"
           >
             <svg viewBox="0 0 100 100" className="w-full h-full fill-yellow-400/90 drop-shadow-xs">
               <path d="M50 0 L58 35 L95 20 L68 50 L95 80 L58 65 L50 100 L42 65 L5 80 L32 50 L5 20 L42 35 Z" />
@@ -90,7 +93,8 @@ export default function OpeningCover({ content, onScrollDown }) {
 
           {/* Tulips Bouquet Gentle Breeze (Bottom Left) */}
           <div 
-            className="absolute left-[8.5%] top-[63%] w-[16%] h-[32%] pointer-events-none z-20 hidden sm:block animate-cover-tulip"
+            data-reveal="paper"
+            className="delay-200 absolute left-[8.5%] top-[63%] w-[16%] h-[32%] pointer-events-none z-20 hidden sm:block animate-cover-tulip"
             style={{ transformOrigin: 'bottom center' }}
           >
             <img 
@@ -102,7 +106,8 @@ export default function OpeningCover({ content, onScrollDown }) {
 
           {/* Green Leopard Pattern Star (Top Left) */}
           <div 
-            className="absolute left-[6.8%] top-[6.5%] w-[17%] h-[27%] pointer-events-none z-10 hidden sm:block animate-micro-float-a"
+            data-reveal="sticker"
+            className="delay-75 absolute left-[6.8%] top-[6.5%] w-[17%] h-[27%] pointer-events-none z-10 hidden sm:block animate-micro-float-a"
           >
             <img 
               src="/assets/collage_elem_30.png" 
@@ -120,7 +125,8 @@ export default function OpeningCover({ content, onScrollDown }) {
             - Nested micro-motion container to preserve exact center positioning
           */}
           <div 
-            className="absolute z-25 pointer-events-auto cursor-default flex items-center justify-center"
+            data-reveal="heading"
+            className="delay-200 absolute z-25 pointer-events-auto cursor-default flex items-center justify-center"
             style={{
               left: '25.7%',
               top: '36.42%',
@@ -132,9 +138,7 @@ export default function OpeningCover({ content, onScrollDown }) {
           >
             <div className="w-full h-full flex items-center justify-center animate-micro-paper">
               <span 
-                className={`font-editorial-script font-bold tracking-normal text-center leading-none transition-all duration-500 hover:scale-105 ${
-                  mounted ? 'animate-name-draw' : 'opacity-0'
-                }`}
+                className="font-editorial-script font-bold tracking-normal text-center leading-none transition-all duration-500 hover:scale-105"
                 style={{
                   fontSize: 'clamp(0.85rem, 1.55vw, 1.75rem)',
                   textShadow: '0 1px 2px rgba(255,255,255,0.7)',
@@ -154,7 +158,8 @@ export default function OpeningCover({ content, onScrollDown }) {
             Designed to guide user down into Overview without obstructing Cover artwork
           */}
           <div 
-            className="absolute bottom-5 sm:bottom-7 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center transition-opacity duration-500"
+            data-reveal="text"
+            className="delay-300 absolute bottom-5 sm:bottom-7 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center transition-opacity duration-500"
             style={{
               opacity: Math.max(0, 1 - scrollY / 150),
             }}

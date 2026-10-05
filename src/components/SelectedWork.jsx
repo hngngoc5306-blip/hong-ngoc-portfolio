@@ -76,8 +76,8 @@ export default function SelectedWork({ content }) {
           </div>
 
           {/* Top Title Block & Typography Headline */}
-          <div className="max-w-4xl space-y-3 mb-10 pb-8 border-b-2 border-earth-900/20">
-            <div className="inline-block template-banner-pink text-xs uppercase tracking-widest font-mono">
+          <div data-reveal="heading" className="delay-100 max-w-4xl space-y-3 mb-10 pb-8 border-b-2 border-earth-900/20">
+            <div data-reveal="sticker" className="delay-150 inline-block template-banner-pink text-xs uppercase tracking-widest font-mono">
               {w.type} // FULL SPECIMEN
             </div>
             
@@ -94,13 +94,13 @@ export default function SelectedWork({ content }) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             
             {/* Left 6 cols: Project Intent, Narrative & Editorial Action */}
-            <div className="lg:col-span-6 space-y-6">
+            <div data-reveal="text" className="delay-200 lg:col-span-6 space-y-6">
               <p className="text-earth-800 text-base sm:text-lg lg:text-[1.15rem] leading-relaxed font-sans text-justify">
                 {w.description}
               </p>
 
               {/* Tooling Inventory as Physical Printed Tags */}
-              <div className="space-y-2.5 pt-2">
+              <div data-reveal="paper" className="delay-250 space-y-2.5 pt-2">
                 <div className="text-xs sm:text-sm font-mono uppercase tracking-wider text-earth-800 font-black flex items-center gap-2">
                   <span>ENVIRONMENT & TOOLING INVENTORY</span>
                   <div className="h-px flex-1 bg-earth-300" />
@@ -118,7 +118,7 @@ export default function SelectedWork({ content }) {
               </div>
 
               {/* Tactile Editorial Action Button */}
-              <div className="pt-4 flex flex-col sm:flex-row sm:items-center gap-4">
+              <div data-reveal="sticker" className="delay-300 pt-4 flex flex-col sm:flex-row sm:items-center gap-4">
                 <a
                   href={w.liveUrl}
                   target="_blank"
@@ -136,7 +136,7 @@ export default function SelectedWork({ content }) {
             </div>
 
             {/* Right 6 cols: Process & Interaction Rules (Drafting Ledger) */}
-            <div className="lg:col-span-6 bg-[#FAF6F0] p-6 sm:p-8 border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.15)] space-y-6 relative">
+            <div data-reveal="paper" className="delay-250 lg:col-span-6 bg-[#FAF6F0] p-6 sm:p-8 border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.15)] space-y-6 relative">
               <div className="flex items-center justify-between pb-3 border-b-2 border-earth-900">
                 <div className="flex items-center gap-2.5">
                   <Cpu size={20} className="text-earth-900" />
