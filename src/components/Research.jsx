@@ -65,21 +65,25 @@ export default function Research({ content }) {
           </p>
         </div>
 
-        {/* Thematic Research Pillars: Horizontal Monograph Ledger Table */}
-        <div className="bg-white p-6 sm:p-8 border-3 border-earth-900 shadow-[8px_8px_0_rgba(42,24,21,0.18)] mb-20">
+        {/* Thematic Research Pillars: Horizontal Monograph Ledger Table (Core Research Lens) */}
+        <div data-reveal="paper" className="delay-150 bg-white p-6 sm:p-8 border-3 border-earth-900 shadow-[8px_8px_0_rgba(42,24,21,0.18)] mb-20">
           <div className="flex items-center justify-between pb-3 mb-6 border-b-2 border-earth-900">
-            <span className="font-mono text-xs uppercase tracking-widest text-rosewood-600 font-black flex items-center gap-2">
+            <span data-reveal="sticker" className="delay-200 font-mono text-xs uppercase tracking-widest text-rosewood-600 font-black flex items-center gap-2">
               <Bookmark size={14} />
               <span>{r.lensTitle}</span>
             </span>
-            <span className="font-mono text-[11px] text-earth-500 font-bold">
+            <span data-reveal="text" className="delay-250 font-mono text-[11px] text-earth-500 font-bold">
               TAXONOMIC INVENTORY // 4 DOMAINS
             </span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {r.areas.map((area, idx) => (
-              <div key={idx} className="space-y-1.5 border-l-2 border-earth-900 pl-4">
+              <div 
+                key={idx} 
+                data-reveal="text"
+                className={`delay-${200 + idx * 75} space-y-1.5 border-l-2 border-earth-900 pl-4`}
+              >
                 <div className="font-editorial-serif font-black text-sm text-earth-900 flex items-center justify-between">
                   <span>{area.name}</span>
                   <span className="font-mono text-xs text-rosewood-600 font-black">0{idx + 1}</span>
