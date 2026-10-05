@@ -339,7 +339,6 @@ export default function Overview({ content }) {
                 <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 uppercase tracking-wider">
                   {o.experienceTitle}
                 </h3>
-                <span className="text-xs font-mono text-earth-600 font-bold">{o.orgPeriod || '2023–Present'}</span>
               </div>
 
               <div className="space-y-4">
@@ -350,7 +349,6 @@ export default function Overview({ content }) {
                     </div>
 
                     <div className="text-xs font-bold text-earth-900">
-                      <span className="text-earth-500 font-normal">Position: </span>
                       {grp.role}
                     </div>
 

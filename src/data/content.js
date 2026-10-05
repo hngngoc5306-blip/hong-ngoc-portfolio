@@ -24,7 +24,7 @@ export const content = {
       name: 'Nguyen Nhu Hong Ngoc',
       role: 'Undergraduate Student in International Business Economics based in Hanoi, Vietnam',
       intro: 'I am an undergraduate student in International Business Economics at Foreign Trade University, developing a research-oriented profile with interests in supply chain, logistics, sustainability, and digital transformation. Alongside research, I explore digital product development and gain practical experience through event operations and coordination.',
-      quote: '“I am building my path through research, curiosity, and the willingness to turn ideas into something practical.”',
+      quote: 'I am building my path through research, curiosity, and the willingness to turn ideas into something practical.',
       connect: 'connect',
       email: 'ngocngn305@gmail.com',
       orcid: 'https://orcid.org/0009-0000-7463-2105',
@@ -91,7 +91,6 @@ export const content = {
       ],
 
       experienceTitle: 'Experience',
-      orgPeriod: '2023 – Present',
       experienceGroups: [
         {
           org: 'Highschool Music Showdown',
