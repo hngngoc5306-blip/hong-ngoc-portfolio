@@ -55,7 +55,7 @@ export default function SelectedWork({ content }) {
           
           {/* Subtle Falling Sakura Petals & Fresh Leaves on OwlUp studio board (contained inside) */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-            <FallingPetals count={16} className="opacity-95 z-0" />
+            <FallingPetals count={12} className="opacity-95 z-0" />
           </div>
 
           {/* Blue Checkered Washi Tape on top left corner */}

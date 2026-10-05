@@ -112,7 +112,7 @@ export default function Research({ content }) {
           <div data-reveal="paper" className="delay-100 relative bg-[#FAF0F1] p-6 sm:p-10 lg:p-14 border-3 border-rosewood-600 shadow-[16px_16px_0_rgba(184,93,88,0.28)] overflow-visible">
             {/* Subtle Falling Sakura Petals & Fresh Leaves in Plate 01 (contained inside) */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-              <FallingPetals count={14} className="opacity-95 z-0" />
+              <FallingPetals count={12} className="opacity-95 z-0" />
             </div>
 
             {/* Washi tape on corner */}
@@ -210,7 +210,7 @@ export default function Research({ content }) {
           <div data-reveal="paper" className="delay-150 bg-white p-6 sm:p-10 lg:p-12 border-3 border-earth-900 shadow-[12px_12px_0_rgba(42,24,21,0.22)] relative overflow-visible">
             {/* Subtle Falling Sakura Petals & Fresh Leaves in Plate 02 (contained inside) */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-              <FallingPetals count={14} className="opacity-95 z-0" />
+              <FallingPetals count={12} className="opacity-95 z-0" />
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
@@ -297,7 +297,7 @@ export default function Research({ content }) {
           <div data-reveal="paper" className="delay-200 bg-white p-6 sm:p-10 lg:p-12 border-3 border-earth-900 shadow-[12px_12px_0_rgba(42,24,21,0.22)] relative overflow-visible">
             {/* Subtle Falling Sakura Petals & Fresh Leaves in Plate 03 (contained inside) */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-              <FallingPetals count={14} className="opacity-95 z-0" />
+              <FallingPetals count={12} className="opacity-95 z-0" />
             </div>
 
             <div className="space-y-6">
