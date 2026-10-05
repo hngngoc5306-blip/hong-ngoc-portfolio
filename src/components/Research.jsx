@@ -100,9 +100,9 @@ export default function Research({ content }) {
           {/* ======================================================== */}
           {/* PLATE 01 (FLAGSHIP): Published Journal Article in Sustainability (Q1) */}
           {/* ======================================================== */}
-          <div className="relative bg-[#FAF0F1] p-6 sm:p-10 lg:p-14 border-3 border-rosewood-600 shadow-[16px_16px_0_rgba(184,93,88,0.28)]">
+          <div data-reveal="paper" className="delay-100 relative bg-[#FAF0F1] p-6 sm:p-10 lg:p-14 border-3 border-rosewood-600 shadow-[16px_16px_0_rgba(184,93,88,0.28)]">
             {/* Washi tape on corner */}
-            <div className="absolute -top-4 left-10 w-32 h-7 opacity-90 hidden sm:block -rotate-1 pointer-events-none">
+            <div data-reveal="sticker" className="delay-200 absolute -top-4 left-10 w-32 h-7 opacity-90 hidden sm:block -rotate-1 pointer-events-none">
               <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
             </div>
 
@@ -159,7 +159,8 @@ export default function Research({ content }) {
 
               {/* Offset Manuscript Preview Plate with Tape */}
               <div 
-                className="lg:col-span-5 relative p-4 bg-white border-3 border-earth-900 shadow-[8px_8px_0_rgba(42,24,21,0.2)] group cursor-pointer hover:-translate-y-1 transition-transform"
+                data-reveal="photo"
+                className="delay-200 lg:col-span-5 relative p-4 bg-white border-3 border-earth-900 shadow-[8px_8px_0_rgba(42,24,21,0.2)] group cursor-pointer hover:-translate-y-1 transition-transform"
                 onClick={() => setSelectedResearchImage({ src: '/assets/13.jpg', title: r.records[0].title })}
               >
                 <div className="flex justify-between items-center text-xs font-mono text-earth-800 mb-2.5 px-1 border-b border-earth-300 pb-1.5">
@@ -185,7 +186,7 @@ export default function Research({ content }) {
           {/* ======================================================== */}
           {/* PLATE 02: Accepted Conference Research — SR-ICYREB 2025   */}
           {/* ======================================================== */}
-          <div className="bg-white p-6 sm:p-10 lg:p-12 border-3 border-earth-900 shadow-[12px_12px_0_rgba(42,24,21,0.22)] relative">
+          <div data-reveal="paper" className="delay-150 bg-white p-6 sm:p-10 lg:p-12 border-3 border-earth-900 shadow-[12px_12px_0_rgba(42,24,21,0.22)] relative">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
               
               <div className="lg:col-span-7 space-y-5">
@@ -232,7 +233,8 @@ export default function Research({ content }) {
 
               {/* Conference Evidence Visual (14.jpg) */}
               <div 
-                className="lg:col-span-5 relative p-4 bg-[#FAF6F0] border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.15)] group cursor-pointer hover:-translate-y-1 transition-transform"
+                data-reveal="photo"
+                className="delay-200 lg:col-span-5 relative p-4 bg-[#FAF6F0] border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.15)] group cursor-pointer hover:-translate-y-1 transition-transform"
                 onClick={() => setSelectedResearchImage({ src: '/assets/14.jpg', title: r.records[1].title })}
               >
                 <div className="flex justify-between items-center text-xs font-mono text-earth-800 mb-2 px-1 border-b border-earth-300 pb-1">
@@ -259,7 +261,7 @@ export default function Research({ content }) {
           {/* ======================================================== */}
           {/* PLATE 03: Completed Manuscript — SSB Tax Policy           */}
           {/* ======================================================== */}
-          <div className="bg-white p-6 sm:p-10 lg:p-12 border-3 border-earth-900 shadow-[12px_12px_0_rgba(42,24,21,0.22)] relative">
+          <div data-reveal="paper" className="delay-200 bg-white p-6 sm:p-10 lg:p-12 border-3 border-earth-900 shadow-[12px_12px_0_rgba(42,24,21,0.22)] relative">
             <div className="space-y-6">
               
               <div className="flex flex-wrap items-center gap-2.5">

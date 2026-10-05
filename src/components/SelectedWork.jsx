@@ -197,11 +197,12 @@ export default function SelectedWork({ content }) {
               
               {/* Drafting Blueprint 1: UX Journey Flow (5 cols) */}
               <div 
-                className="lg:col-span-5 relative p-4 bg-white border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.2)] group cursor-pointer hover:-translate-y-1 transition-transform"
+                data-reveal="photo"
+                className="delay-100 lg:col-span-5 relative p-4 bg-white border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.2)] group cursor-pointer hover:-translate-y-1 transition-transform"
                 onClick={() => setSelectedImage({ src: '/assets/9.jpg', title: w.flowLabel })}
               >
                 {/* Washi tape on blueprint */}
-                <div className="absolute -top-3.5 left-10 w-28 h-6 opacity-90 pointer-events-none -rotate-1">
+                <div data-reveal="sticker" className="delay-200 absolute -top-3.5 left-10 w-28 h-6 opacity-90 pointer-events-none -rotate-1">
                   <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
                 </div>
 
@@ -234,7 +235,8 @@ export default function SelectedWork({ content }) {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Screen 01 (10.jpg) */}
                   <div 
-                    className="relative p-3.5 bg-white border-2 border-earth-900 shadow-[5px_5px_0_rgba(42,24,21,0.15)] group cursor-pointer hover:-translate-y-1 transition-transform"
+                    data-reveal="photo"
+                    className="delay-200 relative p-3.5 bg-white border-2 border-earth-900 shadow-[5px_5px_0_rgba(42,24,21,0.15)] group cursor-pointer hover:-translate-y-1 transition-transform"
                     onClick={() => setSelectedImage({ src: '/assets/10.jpg', title: 'OwlUp Recovery Timeline Interface' })}
                   >
                     <div className="aspect-[4/3] bg-paper-100 overflow-hidden border border-earth-300 mb-2">
@@ -254,7 +256,8 @@ export default function SelectedWork({ content }) {
 
                   {/* Screen 02 (11.jpg) */}
                   <div 
-                    className="relative p-3.5 bg-white border-2 border-earth-900 shadow-[5px_5px_0_rgba(42,24,21,0.15)] group cursor-pointer hover:-translate-y-1 transition-transform"
+                    data-reveal="photo"
+                    className="delay-300 relative p-3.5 bg-white border-2 border-earth-900 shadow-[5px_5px_0_rgba(42,24,21,0.15)] group cursor-pointer hover:-translate-y-1 transition-transform"
                     onClick={() => setSelectedImage({ src: '/assets/11.jpg', title: 'OwlUp Caffeine Advisor Interface' })}
                   >
                     <div className="aspect-[4/3] bg-paper-100 overflow-hidden border border-earth-300 mb-2">
@@ -275,10 +278,11 @@ export default function SelectedWork({ content }) {
 
                 {/* Screen 03 (12.jpg) — Wide Interface Specimen with Tape */}
                 <div 
-                  className="relative p-4 bg-white border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.18)] group cursor-pointer hover:-translate-y-1 transition-transform"
+                  data-reveal="photo"
+                  className="delay-400 relative p-4 bg-white border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.18)] group cursor-pointer hover:-translate-y-1 transition-transform"
                   onClick={() => setSelectedImage({ src: '/assets/12.jpg', title: 'OwlUp Settings & Chronotype Profile' })}
                 >
-                  <div className="absolute -top-3.5 right-12 w-28 h-6 opacity-85 pointer-events-none rotate-2">
+                  <div data-reveal="sticker" className="delay-500 absolute -top-3.5 right-12 w-28 h-6 opacity-85 pointer-events-none rotate-2">
                     <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
                   </div>
 

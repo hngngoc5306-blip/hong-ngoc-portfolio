@@ -93,7 +93,7 @@ export default function Experience({ content }) {
             <div className="lg:col-span-6 space-y-4 pt-2 lg:pt-0">
               
               {/* Memo 1: Yellow — Highschool Music Showdown */}
-              <div className="template-sticky-yellow p-5 transform -rotate-1 border-2 border-earth-900 shadow-[5px_5px_0_rgba(42,24,21,0.15)]">
+              <div data-reveal="sticker" className="delay-100 template-sticky-yellow p-5 transform -rotate-1 border-2 border-earth-900 shadow-[5px_5px_0_rgba(42,24,21,0.15)]">
                 <div className="flex justify-between items-center mb-1.5">
                   <span className="font-mono text-xs sm:text-sm font-black uppercase tracking-wider text-earth-900">
                     2023 · Highschool Music Showdown
@@ -109,7 +109,7 @@ export default function Experience({ content }) {
               </div>
 
               {/* Memo 2: Pink — The Inspirers */}
-              <div className="template-sticky-pink p-5 transform rotate-1 border-2 border-earth-900 shadow-[5px_5px_0_rgba(42,24,21,0.15)]">
+              <div data-reveal="sticker" className="delay-200 template-sticky-pink p-5 transform rotate-1 border-2 border-earth-900 shadow-[5px_5px_0_rgba(42,24,21,0.15)]">
                 <div className="flex justify-between items-center mb-1.5">
                   <span className="font-mono text-xs sm:text-sm font-black uppercase tracking-wider text-earth-900">
                     2024 – 2025 · The Inspirers
@@ -126,7 +126,7 @@ export default function Experience({ content }) {
               </div>
 
               {/* Memo 3: Sky Blue — FansViet */}
-              <div className="template-sticky-blue p-5 transform -rotate-1 border-2 border-earth-900 shadow-[5px_5px_0_rgba(42,24,21,0.15)]">
+              <div data-reveal="sticker" className="delay-300 template-sticky-blue p-5 transform -rotate-1 border-2 border-earth-900 shadow-[5px_5px_0_rgba(42,24,21,0.15)]">
                 <div className="flex justify-between items-center mb-1.5">
                   <span className="font-mono text-xs sm:text-sm font-black uppercase tracking-wider text-earth-900">
                     2025 · FansViet
@@ -158,10 +158,10 @@ export default function Experience({ content }) {
           <div className="mb-24 relative">
             
             {/* The Notebook Surface Sheet */}
-            <div className="relative bg-[#FAF6F0] border-3 border-earth-900 shadow-[18px_18px_0_rgba(42,24,21,0.28)] overflow-visible">
+            <div data-reveal="paper" className="delay-100 relative bg-[#FAF6F0] border-3 border-earth-900 shadow-[18px_18px_0_rgba(42,24,21,0.28)] overflow-visible">
               
               {/* Binder Clip at top left of notebook */}
-              <div className="absolute -top-7 left-[18%] -translate-x-1/2 w-12 h-12 z-30 pointer-events-none hidden md:block">
+              <div data-reveal="sticker" className="delay-200 absolute -top-7 left-[18%] -translate-x-1/2 w-12 h-12 z-30 pointer-events-none hidden md:block">
                 <img src="/assets/collage_elem_40.png" alt="Binder clip" className="w-full h-full object-contain filter drop-shadow-md" />
               </div>
 
@@ -463,10 +463,10 @@ export default function Experience({ content }) {
           <div className="mb-24 relative">
             
             {/* The Notebook Surface Sheet — Same Warm Cream & Heavy Editorial Shadow as Tatake */}
-            <div className="relative bg-[#FAF6F0] border-3 border-earth-900 shadow-[18px_18px_0_rgba(42,24,21,0.28)] overflow-visible">
+            <div data-reveal="paper" className="delay-100 relative bg-[#FAF6F0] border-3 border-earth-900 shadow-[18px_18px_0_rgba(42,24,21,0.28)] overflow-visible">
               
               {/* Binder Clip at top right clipping the photo memory page */}
-              <div className="absolute -top-7 right-[18%] translate-x-1/2 w-12 h-12 z-30 pointer-events-none hidden md:block">
+              <div data-reveal="sticker" className="delay-200 absolute -top-7 right-[18%] translate-x-1/2 w-12 h-12 z-30 pointer-events-none hidden md:block">
                 <img src="/assets/collage_elem_40.png" alt="Binder clip" className="w-full h-full object-contain filter drop-shadow-md" />
               </div>
 

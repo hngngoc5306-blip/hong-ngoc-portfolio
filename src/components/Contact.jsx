@@ -202,7 +202,7 @@ export default function Contact({ content }) {
                   <div className="space-y-3.5 pt-1">
                     
                     {/* PILL 1: Yellow (#FEE78A) — University & Location */}
-                    <div className="bg-[#FEE78A] border-2 border-earth-900 px-5 sm:px-6 py-3 rounded-full flex items-center justify-center sm:justify-start gap-2.5 shadow-[3px_3px_0_rgba(42,24,21,0.2)] hover:translate-y-[-1px] transition-transform">
+                    <div data-reveal="sticker" className="delay-100 bg-[#FEE78A] border-2 border-earth-900 px-5 sm:px-6 py-3 rounded-full flex items-center justify-center sm:justify-start gap-2.5 shadow-[3px_3px_0_rgba(42,24,21,0.2)] hover:translate-y-[-1px] transition-transform">
                       <MapPin size={17} className="text-earth-900 shrink-0" />
                       <span className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-earth-900 truncate">
                         Foreign Trade University · Hanoi, Vietnam
@@ -210,7 +210,7 @@ export default function Contact({ content }) {
                     </div>
 
                     {/* PILL 2: Pink (#FFB7CE) — Direct Email */}
-                    <div className="bg-[#FFB7CE] border-2 border-earth-900 px-5 sm:px-6 py-3 rounded-full flex items-center justify-between shadow-[3px_3px_0_rgba(42,24,21,0.2)] hover:translate-y-[-1px] transition-transform">
+                    <div data-reveal="sticker" className="delay-200 bg-[#FFB7CE] border-2 border-earth-900 px-5 sm:px-6 py-3 rounded-full flex items-center justify-between shadow-[3px_3px_0_rgba(42,24,21,0.2)] hover:translate-y-[-1px] transition-transform">
                       <div className="flex items-center gap-2.5 truncate">
                         <Mail size={17} className="text-earth-900 shrink-0" />
                         <a 
@@ -231,10 +231,11 @@ export default function Contact({ content }) {
 
                     {/* PILL 3: Cyan (#38BDF8) — Verified ORCID Identifier */}
                     <a 
+                      data-reveal="sticker"
                       href={ct.orcid}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-[#38BDF8] border-2 border-earth-900 px-5 sm:px-6 py-3 rounded-full flex items-center justify-between shadow-[3px_3px_0_rgba(42,24,21,0.2)] hover:translate-y-[-1px] transition-transform cursor-pointer"
+                      className="delay-300 bg-[#38BDF8] border-2 border-earth-900 px-5 sm:px-6 py-3 rounded-full flex items-center justify-between shadow-[3px_3px_0_rgba(42,24,21,0.2)] hover:translate-y-[-1px] transition-transform cursor-pointer"
                     >
                       <div className="flex items-center gap-2.5 truncate">
                         <span className="w-5 h-5 bg-white text-earth-900 rounded-full flex items-center justify-center font-bold text-[10px] shrink-0 border border-earth-900">iD</span>
@@ -246,7 +247,7 @@ export default function Contact({ content }) {
                     </a>
 
                     {/* PILL 4: Yellow (#FEE78A) — Collaboration Callout */}
-                    <div className="bg-[#FEE78A] border-2 border-earth-900 px-5 sm:px-6 py-3 rounded-full flex items-center justify-center sm:justify-start gap-2.5 shadow-[3px_3px_0_rgba(42,24,21,0.2)] hover:translate-y-[-1px] transition-transform">
+                    <div data-reveal="sticker" className="delay-400 bg-[#FEE78A] border-2 border-earth-900 px-5 sm:px-6 py-3 rounded-full flex items-center justify-center sm:justify-start gap-2.5 shadow-[3px_3px_0_rgba(42,24,21,0.2)] hover:translate-y-[-1px] transition-transform">
                       <Sparkles size={17} className="text-earth-900 shrink-0" />
                       <span className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-earth-900 truncate">
                         Open to Research & Project Collaboration
