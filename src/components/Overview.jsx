@@ -66,9 +66,9 @@ export default function Overview({ content }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           
           {/* ========================================================= */}
-          {/* LEFT COLUMN: Photo Frame, Badge, Quote, Connect (3.5 cols) */}
+          {/* LEFT COLUMN: Photo Frame, Badge, Quote, Connect, Me in 3 Words */}
           {/* ========================================================= */}
-          <div className="lg:col-span-4 xl:col-span-3.5 space-y-7">
+          <div className="lg:col-span-4 xl:col-span-3 space-y-7">
             
             {/* Retro rectangular framed photo with tape & doodles matching Template.pdf */}
             <div className="relative mx-auto max-w-[280px] sm:max-w-[310px]">
@@ -158,12 +158,38 @@ export default function Overview({ content }) {
               </a>
             </div>
 
+            {/* Me in 3 words: Torn Notebook Lined Paper Sheet with Tape (Moved to Column 1 directly below Connect) */}
+            <div className="pt-2 relative">
+              <div className="relative p-5 sm:p-6 bg-white border-2 border-earth-400 shadow-[5px_5px_0_rgba(42,24,21,0.12)] notebook-ruled">
+                {/* Washi tape at corner */}
+                <div className="absolute -top-3.5 right-6 w-24 sm:w-28 h-6 opacity-85 pointer-events-none rotate-2">
+                  <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
+                </div>
+
+                <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 mb-3 flex items-center gap-2">
+                  <span>{o.meIn3WordsTitle}</span>
+                  <span className="font-editorial-script text-rosewood-600 font-bold text-base">~ self reflection ~</span>
+                </h3>
+
+                <div className="space-y-3 text-sm">
+                  {o.meIn3Words.map((item, idx) => (
+                    <div key={idx} className="flex items-baseline gap-2.5">
+                      <span className="font-black text-earth-900 font-editorial-serif text-lg sm:text-xl shrink-0">
+                        {item.word}:
+                      </span>
+                      <span className="text-earth-800 italic font-editorial-script text-lg sm:text-xl">“{item.desc}”</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
           </div>
 
           {/* ========================================================= */}
-          {/* CENTER COLUMN: Bio, Expertise, Tools, 3 Words, Soft Skills (5 cols) */}
+          {/* CENTER COLUMN: Bio, Expertise, Tools, Language, Soft Skills, Education, Snapshot */}
           {/* ========================================================= */}
-          <div className="lg:col-span-5 space-y-8">
+          <div className="lg:col-span-5 xl:col-span-6 space-y-8">
             
             {/* Identity & Short Bio with Muted Pink Highlighter */}
             <div>
@@ -250,32 +276,6 @@ export default function Overview({ content }) {
 
             </div>
 
-            {/* Me in 3 words: Torn Notebook Lined Paper Sheet with Tape */}
-            <div className="pt-3 relative">
-              <div className="relative p-6 bg-white border-2 border-earth-400 shadow-[5px_5px_0_rgba(42,24,21,0.12)] notebook-ruled">
-                {/* Washi tape at corner */}
-                <div className="absolute -top-3.5 right-6 w-28 h-6 opacity-85 pointer-events-none rotate-2">
-                  <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
-                </div>
-
-                <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 mb-3 flex items-center gap-2">
-                  <span>{o.meIn3WordsTitle}</span>
-                  <span className="font-editorial-script text-rosewood-600 font-bold text-base">~ self reflection ~</span>
-                </h3>
-
-                <div className="space-y-3 text-sm">
-                  {o.meIn3Words.map((item, idx) => (
-                    <div key={idx} className="flex items-baseline gap-2.5">
-                      <span className="font-black text-earth-900 font-editorial-serif text-lg sm:text-xl shrink-0">
-                        {item.word}:
-                      </span>
-                      <span className="text-earth-800 italic font-editorial-script text-lg sm:text-xl">“{item.desc}”</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
             {/* Soft Skills: Rectangular Archival Stamp Tags */}
             <div className="pt-2">
               <h3 className="font-editorial-serif font-black text-base sm:text-lg text-earth-900 uppercase tracking-wider mb-2.5">
@@ -293,12 +293,84 @@ export default function Overview({ content }) {
               </div>
             </div>
 
+            {/* Horizontal Row: EDUCATION & ACADEMIC SNAPSHOT (Below Language/Tools, horizontally aligned) */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-5 border-t border-earth-300">
+              {/* Education Open Ledger */}
+              <div className="border-2 border-earth-900 bg-white p-5 sm:p-6 shadow-[5px_5px_0_rgba(42,24,21,0.15)] flex flex-col justify-between">
+                <div>
+                  <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 uppercase tracking-wider mb-4 pb-2 border-b-2 border-earth-900">
+                    {o.educationTitle}
+                  </h3>
+
+                  <div className="space-y-4">
+                    {o.eduItems.map((edu, idx) => (
+                      <div 
+                        key={idx} 
+                        className={`p-3.5 border-2 text-xs sm:text-sm space-y-1.5 ${
+                          edu.highlight 
+                            ? 'bg-[#FAF0F1] border-rosewood-500' 
+                            : 'bg-paper-100 border-earth-400'
+                        }`}
+                      >
+                        <div className="flex justify-between items-center">
+                          <span className={`font-mono text-xs font-bold px-2 py-0.5 ${
+                            edu.highlight ? 'bg-rosewood-600 text-white' : 'bg-earth-800 text-paper-50'
+                          }`}>
+                            {edu.period}
+                          </span>
+                          {edu.highlight && (
+                            <span className="text-xs uppercase font-black text-rosewood-600 tracking-wider">
+                              Current Degree
+                            </span>
+                          )}
+                        </div>
+                        <div className="font-black text-earth-900 text-base sm:text-lg pt-1 font-editorial-serif leading-snug">
+                          {edu.school}
+                        </div>
+                        <div className="text-earth-800 font-semibold text-xs sm:text-sm">
+                          {edu.major}
+                        </div>
+                        <div className="text-xs text-earth-600 font-mono font-medium">
+                          {edu.status}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Academic Snapshot — Vintage Catalog Matrix */}
+              <div className="border-3 border-earth-900 bg-earth-900 text-paper-50 p-5 sm:p-6 shadow-[6px_6px_0_rgba(42,24,21,0.25)] relative overflow-hidden flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-2.5 mb-4 pb-2.5 border-b border-earth-700">
+                    <BookMarked size={18} className="text-[#EBBEC3]" />
+                    <h3 className="font-editorial-serif font-black text-base sm:text-lg text-paper-50 uppercase tracking-wider">
+                      {o.snapshotTitle}
+                    </h3>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3 pt-1">
+                    {o.snapshotStats.map((st, idx) => (
+                      <div key={idx} className="bg-earth-800/90 p-3.5 border border-earth-700 flex flex-col justify-center">
+                        <div className="font-editorial-serif text-3xl font-black text-[#EBBEC3]">
+                          {st.num}
+                        </div>
+                        <div className="text-xs font-mono text-paper-200 uppercase tracking-wider leading-tight mt-1 font-semibold">
+                          {st.label}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
           {/* ========================================================= */}
-          {/* RIGHT COLUMN: Experience, Education, Academic Snapshot (3.5 cols) */}
+          {/* RIGHT COLUMN: Experience Open Ledger */}
           {/* ========================================================= */}
-          <div className="lg:col-span-3 xl:col-span-3.5 space-y-8">
+          <div className="lg:col-span-3 xl:col-span-3 space-y-8">
             
             {/* Experience Open Ledger */}
             <div className="border-2 border-earth-900 bg-white p-6 shadow-[5px_5px_0_rgba(42,24,21,0.15)]">
@@ -331,71 +403,6 @@ export default function Overview({ content }) {
                           <span className="font-mono text-xs text-earth-600 shrink-0 font-bold">· {ev.year}</span>
                         </div>
                       ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Education Open Ledger */}
-            <div className="border-2 border-earth-900 bg-white p-6 shadow-[5px_5px_0_rgba(42,24,21,0.15)]">
-              <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 uppercase tracking-wider mb-4 pb-2 border-b-2 border-earth-900">
-                {o.educationTitle}
-              </h3>
-
-              <div className="space-y-4">
-                {o.eduItems.map((edu, idx) => (
-                  <div 
-                    key={idx} 
-                    className={`p-4 border-2 text-xs sm:text-sm space-y-1.5 ${
-                      edu.highlight 
-                        ? 'bg-[#FAF0F1] border-rosewood-500' 
-                        : 'bg-paper-100 border-earth-400'
-                    }`}
-                  >
-                    <div className="flex justify-between items-center">
-                      <span className={`font-mono text-xs font-bold px-2 py-0.5 ${
-                        edu.highlight ? 'bg-rosewood-600 text-white' : 'bg-earth-800 text-paper-50'
-                      }`}>
-                        {edu.period}
-                      </span>
-                      {edu.highlight && (
-                        <span className="text-xs uppercase font-black text-rosewood-600 tracking-wider">
-                          Current Degree
-                        </span>
-                      )}
-                    </div>
-                    <div className="font-black text-earth-900 text-base sm:text-lg pt-1 font-editorial-serif">
-                      {edu.school}
-                    </div>
-                    <div className="text-earth-800 font-semibold text-xs sm:text-sm">
-                      {edu.major}
-                    </div>
-                    <div className="text-xs text-earth-600 font-mono font-medium">
-                      {edu.status}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Academic Snapshot — Vintage Catalog Matrix */}
-            <div className="border-3 border-earth-900 bg-earth-900 text-paper-50 p-6 shadow-[6px_6px_0_rgba(42,24,21,0.25)] relative overflow-hidden">
-              <div className="flex items-center gap-2.5 mb-4 pb-2.5 border-b border-earth-700">
-                <BookMarked size={18} className="text-[#EBBEC3]" />
-                <h3 className="font-editorial-serif font-black text-base sm:text-lg text-paper-50 uppercase tracking-wider">
-                  {o.snapshotTitle}
-                </h3>
-              </div>
-
-              <div className="grid grid-cols-2 gap-3 pt-1">
-                {o.snapshotStats.map((st, idx) => (
-                  <div key={idx} className="bg-earth-800/90 p-3.5 border border-earth-700">
-                    <div className="font-editorial-serif text-3xl font-black text-[#EBBEC3]">
-                      {st.num}
-                    </div>
-                    <div className="text-xs font-mono text-paper-200 uppercase tracking-wider leading-tight mt-1 font-semibold">
-                      {st.label}
                     </div>
                   </div>
                 ))}
