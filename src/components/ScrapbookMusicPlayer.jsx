@@ -148,15 +148,8 @@ export default function ScrapbookMusicPlayer() {
 
               {/* Track Metadata & Title Hierarchy */}
               <div className="min-w-0 flex-1">
-                {/* Introductory Sentence: Cute editorial note before title */}
-                <div className="flex items-center gap-1.5 text-xs sm:text-sm font-editorial-script text-rosewood-700 font-bold tracking-wide">
-                  <span className="text-accent-terracotta">♪</span>
-                  <span>A little soundtrack for the pages ahead</span>
-                  <span className="text-earth-400">⟶</span>
-                </div>
-                
                 {/* Title */}
-                <h3 className="font-editorial-serif font-black text-lg sm:text-xl lg:text-2xl text-earth-900 tracking-tight leading-tight mt-0.5 truncate">
+                <h3 className="font-editorial-serif font-black text-lg sm:text-xl lg:text-2xl text-earth-900 tracking-tight leading-tight truncate">
                   A Tiny Tune ♫
                 </h3>
 
@@ -233,10 +226,12 @@ export default function ScrapbookMusicPlayer() {
 
           </div>
 
-          {/* Bottom subtle handwritten note */}
-          <div className="mt-2.5 pt-1.5 border-t border-earth-300/80 flex items-center justify-between text-xs font-editorial-script text-earth-700">
-            <span>~ background listening while exploring portfolio ~</span>
-            <span className="font-mono text-[10px] text-earth-500 uppercase tracking-widest hidden sm:inline">
+          {/* Bottom subtle handwritten note with enlarged text */}
+          <div className="mt-2.5 pt-1.5 border-t border-earth-300/80 flex items-center justify-between text-earth-800">
+            <span className="font-editorial-script text-base sm:text-lg lg:text-xl font-bold tracking-wide">
+              ~ background listening while exploring portfolio ~
+            </span>
+            <span className="font-mono text-[10px] sm:text-xs text-earth-500 uppercase tracking-widest hidden sm:inline">
               TRACK NO. 01 · CASSETTE INSERT
             </span>
           </div>
