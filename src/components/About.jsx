@@ -1,6 +1,7 @@
 import React from 'react';
 import { Compass, Sparkles, ArrowRight, Quote, Bookmark, GraduationCap, Code } from 'lucide-react';
 import WashiTape from './WashiTape';
+import FallingPetals from './FallingPetals';
 
 export default function About({ content }) {
   const a = content.about;
@@ -195,14 +196,17 @@ export default function About({ content }) {
               </div>
 
               {/* Lined Notebook Paper Memo */}
-              <div className="relative p-5 bg-[#FAF0F1] border-2 border-rosewood-400 shadow-[4px_4px_0_rgba(42,24,21,0.1)] notebook-ruled">
-                <div className="absolute -top-3.5 left-8 w-24 h-6 opacity-90 pointer-events-none rotate-1">
+              <div className="relative p-5 bg-[#FAF0F1] border-2 border-rosewood-400 shadow-[4px_4px_0_rgba(42,24,21,0.1)] notebook-ruled overflow-hidden">
+                {/* Falling pink petals drift under memo text */}
+                <FallingPetals count={3} className="opacity-75 z-0" />
+
+                <div className="absolute -top-3.5 left-8 w-24 h-6 opacity-90 pointer-events-none rotate-1 z-10">
                   <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
                 </div>
-                <p className="font-editorial-script text-xl sm:text-2xl text-earth-900 leading-snug pt-1">
+                <p className="font-editorial-script text-xl sm:text-2xl text-earth-900 leading-snug pt-1 relative z-1">
                   “Bridging theoretical economic equilibrium with real-world operational friction.”
                 </p>
-                <span className="font-mono text-xs text-rosewood-600 uppercase font-black tracking-wider block text-right mt-1.5">
+                <span className="font-mono text-xs text-rosewood-600 uppercase font-black tracking-wider block text-right mt-1.5 relative z-1">
                   ~ Foreign Trade University · Hanoi ~
                 </span>
               </div>

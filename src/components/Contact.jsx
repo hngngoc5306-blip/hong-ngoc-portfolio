@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, ExternalLink, Copy, MapPin, Sparkles } from 'lucide-react';
+import FallingPetals from './FallingPetals';
 
 /**
  * Hand-drawn 8-point Starburst matching Template.pdf Page 9
@@ -108,8 +109,11 @@ export default function Contact({ content }) {
               {/* ----------------------------------------------------------------- */}
               {/* LEFT PAGE OF THE BOOK: HERO SINGLE IMAGE (IMAGE 17 ONLY)          */}
               {/* ----------------------------------------------------------------- */}
-              <div className="lg:col-span-5 p-6 sm:p-10 lg:p-12 flex flex-col justify-between relative border-b-2 lg:border-b-0 lg:border-r border-earth-900/15 bg-[#FCFBF8]">
+              <div className="lg:col-span-5 p-6 sm:p-10 lg:p-12 flex flex-col justify-between relative border-b-2 lg:border-b-0 lg:border-r border-earth-900/15 bg-[#FCFBF8] overflow-hidden">
                 
+                {/* Falling pink petals floating under polaroid frame */}
+                <FallingPetals count={4} className="opacity-70 z-0" />
+
                 {/* Pink Gingham Washi Tape at top-left (Pure CSS rendered, Page 9 exact replica) */}
                 <div className="flex justify-start pt-1 pb-4">
                   <div 
