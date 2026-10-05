@@ -677,6 +677,21 @@
   transform: scale(0.95);
 }
 
+/* Subtle ink trail fading */
+@keyframes inkFade {
+  0% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+}
+.animate-ink-fade {
+  animation: inkFade 0.4s ease-out forwards;
+}
+
 /* Accessibility: Respect Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {

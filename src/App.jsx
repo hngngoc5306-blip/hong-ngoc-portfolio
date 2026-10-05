@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import EditorialBridge from './components/EditorialBridge';
 import ScrapbookMusicPlayer from './components/ScrapbookMusicPlayer';
+import EditorialScrapbookCursor from './components/EditorialScrapbookCursor';
 import { useScrollEntrance } from './hooks/useScrollEntrance';
 import { content } from './data/content';
 
@@ -25,6 +26,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#88BBD3] text-earth-900 font-sans selection:bg-rosewood-200 selection:text-earth-900 relative">
+      {/* Interactive Editorial Scrapbook Custom Cursor */}
+      <EditorialScrapbookCursor />
+
       {/* Floating Global Navbar with smooth anchor navigation */}
       <Navbar content={currentContent} />
 
