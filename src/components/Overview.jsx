@@ -166,9 +166,8 @@ export default function Overview({ content }) {
                   <img src="/assets/collage_elem_39.png" alt="Tape" className="w-full h-full object-contain" />
                 </div>
 
-                <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 mb-4 flex items-center gap-2">
-                  <span>{o.meIn3WordsTitle}</span>
-                  <span className="font-editorial-script text-rosewood-600 font-bold text-base">~ self reflection ~</span>
+                <h3 className="font-editorial-serif font-black text-lg sm:text-xl text-earth-900 mb-4 whitespace-nowrap">
+                  {o.meIn3WordsTitle}
                 </h3>
 
                 <div className="space-y-3.5 text-left">
@@ -255,14 +254,14 @@ export default function Overview({ content }) {
                     <span className="w-2 h-2 bg-accent-terracotta shrink-0" />
                     {o.toolsTitle}
                   </h3>
-                  <div className="flex flex-wrap gap-2.5 pt-2">
+                  <div className="flex flex-wrap gap-x-5 gap-y-3 pt-2 items-center">
                     {o.tools.map((t, idx) => {
                       const name = typeof t === 'string' ? t : t.name;
                       const icon = typeof t === 'object' && t.icon ? t.icon : null;
                       return (
-                        <span 
+                        <div 
                           key={idx} 
-                          className="editorial-tag text-earth-900 bg-white font-mono text-xs sm:text-sm font-bold border border-earth-900 shadow-2xs inline-flex items-center gap-3 py-2 px-3.5"
+                          className="text-earth-900 font-mono text-xs sm:text-sm font-bold inline-flex items-center gap-2.5 py-1"
                         >
                           {icon && (
                             <img 
@@ -273,7 +272,7 @@ export default function Overview({ content }) {
                             />
                           )}
                           <span>{name}</span>
-                        </span>
+                        </div>
                       );
                     })}
                   </div>
