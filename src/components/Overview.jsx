@@ -85,18 +85,21 @@ export default function Overview({ content }) {
                 </svg>
               </div>
 
-              {/* Rectangular print frame with thin dark border and offset shadow */}
-              <div className="relative p-2.5 bg-white border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.18)]">
+              {/* Rectangular print frame with physical tactile scrapbook lift, tilt & subtle shadow transition */}
+              <div className="group relative p-2.5 bg-white border-2 border-earth-900 shadow-[6px_6px_0_rgba(42,24,21,0.18)] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:rotate-[-0.75deg] hover:shadow-[10px_10px_0_rgba(42,24,21,0.22)] cursor-pointer">
                 <div className="relative aspect-[3/4] overflow-hidden border border-earth-900/30 bg-paper-200">
                   <img 
                     src="/assets/profile.jpg" 
                     alt={o.name}
-                    className="w-full h-full object-cover object-top hover:scale-103 transition-transform duration-700"
+                    className="w-full h-full object-cover object-top transition-all duration-700 ease-out group-hover:scale-105 group-hover:contrast-[1.03] group-hover:brightness-[1.02]"
                   />
+                  
+                  {/* Subtle warm vintage film light sheen overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-rosewood-900/10 via-transparent to-amber-100/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </div>
 
-                {/* "hello!" / "xin chào!" speech bubble badge on bottom right of photo */}
-                <div className="absolute bottom-4 right-4 bg-paper-50 text-earth-900 font-editorial-serif font-bold text-xs px-3.5 py-1 border-2 border-earth-900 shadow-[2px_2px_0_rgba(42,24,21,0.3)] transform -rotate-2">
+                {/* "hello!" speech bubble badge on bottom right with playful pop animation on hover */}
+                <div className="absolute bottom-4 right-4 bg-paper-50 text-earth-900 font-editorial-serif font-bold text-xs px-3.5 py-1 border-2 border-earth-900 shadow-[2px_2px_0_rgba(42,24,21,0.3)] transform -rotate-2 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-1 group-hover:bg-[#FEE78A]">
                   {o.badgeHello}
                 </div>
               </div>
