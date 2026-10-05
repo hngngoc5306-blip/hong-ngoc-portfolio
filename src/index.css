@@ -687,20 +687,25 @@
 /* Cute Magical Star Particle fading & floating */
 @keyframes starSparkle {
   0% {
-    opacity: 0.95;
-    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.6) rotate(0deg);
   }
-  50% {
+  25% {
+    opacity: 0.95;
+    transform: translate(-50%, -6px) scale(1.15) rotate(20deg);
+  }
+  60% {
     opacity: 0.8;
-    transform: translate(-50%, -4px) scale(1.15) rotate(15deg);
+    transform: translate(-50%, 4px) scale(0.9) rotate(45deg);
   }
   100% {
     opacity: 0;
-    transform: translate(-50%, 8px) scale(0.2) rotate(45deg);
+    transform: translate(-50%, 16px) scale(0.2) rotate(80deg);
   }
 }
 .animate-star-sparkle {
-  animation: starSparkle 0.45s ease-out forwards;
+  animation: starSparkle 0.75s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  filter: drop-shadow(0 0 3px currentColor);
 }
 
 /* Accessibility: Respect Reduced Motion */

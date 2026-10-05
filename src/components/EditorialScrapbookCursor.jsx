@@ -60,38 +60,48 @@ export default function EditorialScrapbookCursor() {
         setBadgeText('');
       }
 
-      // Spawn cute magical star particles trail
+      // Spawn cute magical star particles trail (more vibrant & noticeable)
       const now = Date.now();
-      if (now - lastSpawnTime.current > 45) {
+      if (now - lastSpawnTime.current > 24) {
         lastSpawnTime.current = now;
-        const colors = ['#FEE78A', '#FFB5D5', '#88D49E', '#93C5FD', '#FDE047'];
+        const colors = ['#FEE78A', '#FFB5D5', '#88D49E', '#93C5FD', '#FDE047', '#E26D5C', '#C084FC'];
+        // Spawn 2 distinct particles per tick: one star/sparkle and one luminous dust dot
         const newStar = {
           id: now + Math.random(),
-          x: e.clientX + (Math.random() * 16 - 8),
-          y: e.clientY + (Math.random() * 16 - 8),
-          size: Math.random() * 7 + 4,
+          x: e.clientX + (Math.random() * 22 - 11),
+          y: e.clientY + (Math.random() * 22 - 11),
+          size: Math.random() * 11 + 6, // Larger stars (6px to 17px)
           rotation: Math.random() * 360,
           color: colors[Math.floor(Math.random() * colors.length)],
-          isSparkle: Math.random() > 0.4,
+          isSparkle: true,
         };
-        setStarParticles((prev) => [...prev.slice(-14), newStar]);
+        const newDot = {
+          id: now + Math.random() + 0.1,
+          x: e.clientX + (Math.random() * 18 - 9),
+          y: e.clientY + (Math.random() * 18 - 9),
+          size: Math.random() * 6 + 3.5, // 3.5px to 9.5px round dust dots
+          rotation: 0,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          isSparkle: false,
+        };
+        setStarParticles((prev) => [...prev.slice(-32), newStar, newDot]);
       }
     };
 
     const handleMouseDown = (e) => {
       setIsMouseDown(true);
-      // Spawn a mini burst of stars on click
-      const burstColors = ['#FEE78A', '#FFB5D5', '#FDE047', '#E26D5C'];
-      const burst = Array.from({ length: 6 }).map((_, i) => ({
-        id: Date.now() + i,
-        x: e.clientX + (Math.cos((i * Math.PI) / 3) * 18),
-        y: e.clientY + (Math.sin((i * Math.PI) / 3) * 18),
-        size: Math.random() * 8 + 5,
+      // Spawn an impressive burst of stars & luminous dust on click
+      const burstColors = ['#FEE78A', '#FFB5D5', '#FDE047', '#E26D5C', '#93C5FD'];
+      const burst = Array.from({ length: 12 }).map((_, i) => ({
+        id: Date.now() + i + Math.random(),
+        x: e.clientX + (Math.cos((i * Math.PI) / 6) * (Math.random() * 24 + 12)),
+        y: e.clientY + (Math.sin((i * Math.PI) / 6) * (Math.random() * 24 + 12)),
+        size: Math.random() * 12 + 6,
         rotation: Math.random() * 360,
         color: burstColors[i % burstColors.length],
-        isSparkle: true,
+        isSparkle: i % 3 !== 0,
       }));
-      setStarParticles((prev) => [...prev.slice(-10), ...burst]);
+      setStarParticles((prev) => [...prev.slice(-24), ...burst]);
     };
 
     const handleMouseUp = () => setIsMouseDown(false);
@@ -132,15 +142,15 @@ export default function EditorialScrapbookCursor() {
   useEffect(() => {
     if (starParticles.length === 0) return;
     const timer = setTimeout(() => {
-      setStarParticles((prev) => prev.slice(1));
-    }, 420);
+      setStarParticles((prev) => prev.slice(2));
+    }, 550);
     return () => clearTimeout(timer);
   }, [starParticles]);
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden select-none" aria-hidden="true">
+    <div className="fixed inset-0 pointer-events-none z-[99999] overflow-hidden select-none" aria-hidden="true">
       {/* 1. Magical Star Dust Particle Trail */}
       {starParticles.map((star) => (
         <span

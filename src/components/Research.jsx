@@ -363,7 +363,7 @@ export default function Research({ content }) {
       {/* Lightbox Modal */}
       {selectedResearchImage && (
         <div 
-          className="fixed inset-0 z-50 bg-earth-950/85 backdrop-blur-xs flex items-center justify-center p-4"
+          className="fixed inset-0 z-[9990] bg-earth-950/85 backdrop-blur-xs flex items-center justify-center p-4"
           onClick={() => setSelectedResearchImage(null)}
         >
           <div className="relative max-w-4xl w-full max-h-[90vh] bg-white p-5 border-2 border-earth-900 shadow-[8px_8px_0_rgba(0,0,0,0.5)]" onClick={e => e.stopPropagation()}>

@@ -31,10 +31,38 @@ export default function ScrapbookMusicPlayer() {
     audio.addEventListener('timeupdate', handleTimeUpdate);
     audio.addEventListener('ended', handleEnded);
 
+    // Auto-play music when opening web
+    let hasAttemptedPlay = false;
+    const attemptPlay = () => {
+      if (hasAttemptedPlay || isPlaying) return;
+      audio.play().then(() => {
+        hasAttemptedPlay = true;
+        setIsPlaying(true);
+        // Remove document listeners once playing
+        ['click', 'keydown', 'touchstart', 'scroll'].forEach((evt) => {
+          document.removeEventListener(evt, attemptPlay);
+        });
+      }).catch((err) => {
+        // Modern browsers may require a user gesture before unmuting/playing audio
+        console.warn('Autoplay waiting for initial user interaction:', err);
+      });
+    };
+
+    // 1. Try immediate autoplay
+    attemptPlay();
+
+    // 2. Fallback: On the very first user interaction (click, scroll, key), auto-start music immediately
+    ['click', 'keydown', 'touchstart', 'scroll'].forEach((evt) => {
+      document.addEventListener(evt, attemptPlay, { once: true });
+    });
+
     return () => {
       audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
       audio.removeEventListener('timeupdate', handleTimeUpdate);
       audio.removeEventListener('ended', handleEnded);
+      ['click', 'keydown', 'touchstart', 'scroll'].forEach((evt) => {
+        document.removeEventListener(evt, attemptPlay);
+      });
     };
   }, []);
 
