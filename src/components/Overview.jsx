@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, ExternalLink, Check, Copy, BookMarked, Sparkles } from 'lucide-react';
+import { Mail, ExternalLink, Check, Copy, Sparkles } from 'lucide-react';
 import TornDivider from './TornDivider';
 import WashiTape from './WashiTape';
 
@@ -197,8 +197,10 @@ export default function Overview({ content }) {
             {/* Identity & Short Bio with Muted Pink Highlighter */}
             <div>
               <div className="inline-block">
-                <h2 className="font-editorial-serif text-4xl sm:text-5xl lg:text-[3.8rem] font-black text-earth-900 tracking-tight leading-[1.05] pink-marker">
-                  I’m {o.name}
+                <h2 className="font-editorial-serif text-3xl sm:text-4xl lg:text-[2.6rem] font-black text-earth-900 tracking-tight leading-[1.15] pink-marker">
+                  <span>I’m Nguyen Nhu</span>
+                  <br />
+                  <span>Hong Ngoc</span>
                 </h2>
               </div>
               <p className="text-rosewood-600 font-bold text-lg sm:text-xl lg:text-[1.5rem] mt-3 font-mono tracking-wide leading-snug">
@@ -209,10 +211,10 @@ export default function Overview({ content }) {
               </p>
             </div>
 
-            {/* Main Content Columns: [Expertise -> Soft Skills] & [Tools -> Language -> Academic Snapshot] */}
+            {/* Main Content Columns: [Expertise] & [Tools -> Language -> Soft Skills] */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-7 pt-5 border-t border-earth-300 items-start">
               
-              {/* SUB-COLUMN A: EXPERTISE -> SOFT SKILLS */}
+              {/* SUB-COLUMN A: EXPERTISE */}
               <div className="space-y-7">
                 {/* Expertise List */}
                 <div className="space-y-3.5">
@@ -243,26 +245,9 @@ export default function Overview({ content }) {
                     </div>
                   </div>
                 </div>
-
-                {/* Soft Skills: Directly below Expertise, arranged into ONE SINGLE VERTICAL COLUMN */}
-                <div className="pt-2 border-t border-earth-200">
-                  <h3 className="font-editorial-serif font-black text-base sm:text-lg text-earth-900 uppercase tracking-wider mb-3">
-                    {o.softSkillsTitle}
-                  </h3>
-                  <div className="flex flex-col items-start space-y-2">
-                    {o.softSkills.map((s, idx) => (
-                      <span 
-                        key={idx} 
-                        className="editorial-tag bg-paper-100 hover:bg-earth-900 hover:text-paper-50 transition-colors cursor-default text-xs sm:text-sm font-semibold border border-earth-900/40 px-3 py-1 block w-fit"
-                      >
-                        {s}
-                      </span>
-                    ))}
-                  </div>
-                </div>
               </div>
 
-              {/* SUB-COLUMN B: TOOLS -> LANGUAGE -> ACADEMIC SNAPSHOT */}
+              {/* SUB-COLUMN B: TOOLS -> LANGUAGE -> SOFT SKILLS */}
               <div className="space-y-7">
                 {/* Tools */}
                 <div>
@@ -270,20 +255,20 @@ export default function Overview({ content }) {
                     <span className="w-2 h-2 bg-accent-terracotta shrink-0" />
                     {o.toolsTitle}
                   </h3>
-                  <div className="flex flex-wrap gap-2 pt-2">
+                  <div className="flex flex-wrap gap-2.5 pt-2">
                     {o.tools.map((t, idx) => {
                       const name = typeof t === 'string' ? t : t.name;
                       const icon = typeof t === 'object' && t.icon ? t.icon : null;
                       return (
                         <span 
                           key={idx} 
-                          className="editorial-tag text-earth-900 bg-white font-mono text-xs sm:text-sm font-bold border border-earth-900 shadow-2xs inline-flex items-center gap-2.5 py-1.5 px-3"
+                          className="editorial-tag text-earth-900 bg-white font-mono text-xs sm:text-sm font-bold border border-earth-900 shadow-2xs inline-flex items-center gap-3 py-2 px-3.5"
                         >
                           {icon && (
                             <img 
                               src={icon} 
                               alt="" 
-                              className="w-8 h-8 object-contain shrink-0" 
+                              className="w-12 h-12 object-contain shrink-0" 
                               loading="lazy"
                             />
                           )}
@@ -310,28 +295,20 @@ export default function Overview({ content }) {
                   </div>
                 </div>
 
-                {/* Academic Snapshot: DIRECTLY BELOW LANGUAGE */}
+                {/* Soft Skills: Placed below Language (in place of Academic Snapshot) */}
                 <div className="pt-2 border-t border-earth-200">
-                  <div className="border-3 border-earth-900 bg-earth-900 text-paper-50 p-5 shadow-[6px_6px_0_rgba(42,24,21,0.25)] relative overflow-hidden">
-                    <div className="flex items-center gap-2.5 mb-3.5 pb-2 border-b border-earth-700">
-                      <BookMarked size={18} className="text-[#EBBEC3]" />
-                      <h3 className="font-editorial-serif font-black text-base text-paper-50 uppercase tracking-wider">
-                        {o.snapshotTitle}
-                      </h3>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-2.5 pt-1">
-                      {o.snapshotStats.map((st, idx) => (
-                        <div key={idx} className="bg-earth-800/90 p-3 border border-earth-700 flex flex-col justify-center">
-                          <div className="font-editorial-serif text-2xl sm:text-3xl font-black text-[#EBBEC3]">
-                            {st.num}
-                          </div>
-                          <div className="text-[11px] font-mono text-paper-200 uppercase tracking-wider leading-tight mt-1 font-semibold">
-                            {st.label}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                  <h3 className="font-editorial-serif font-black text-base sm:text-lg text-earth-900 uppercase tracking-wider mb-3">
+                    {o.softSkillsTitle}
+                  </h3>
+                  <div className="flex flex-col items-start space-y-2">
+                    {o.softSkills.map((s, idx) => (
+                      <span 
+                        key={idx} 
+                        className="editorial-tag bg-paper-100 hover:bg-earth-900 hover:text-paper-50 transition-colors cursor-default text-xs sm:text-sm font-semibold border border-earth-900/40 px-3 py-1 block w-fit"
+                      >
+                        {s}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
