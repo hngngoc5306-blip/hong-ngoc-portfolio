@@ -653,6 +653,7 @@
 [data-reveal].is-revealed.delay-300 { transition-delay: 300ms !important; }
 [data-reveal].is-revealed.delay-350 { transition-delay: 350ms !important; }
 [data-reveal].is-revealed.delay-400 { transition-delay: 400ms !important; }
+[data-reveal].is-revealed.delay-450 { transition-delay: 450ms !important; }
 [data-reveal].is-revealed.delay-500 { transition-delay: 500ms !important; }
 [data-reveal].is-revealed.delay-600 { transition-delay: 600ms !important; }
 

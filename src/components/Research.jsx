@@ -78,21 +78,25 @@ export default function Research({ content }) {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {r.areas.map((area, idx) => (
-              <div 
-                key={idx} 
-                data-reveal="text"
-                className={`delay-${200 + idx * 75} space-y-1.5 border-l-2 border-earth-900 pl-4`}
-              >
-                <div className="font-editorial-serif font-black text-sm text-earth-900 flex items-center justify-between">
-                  <span>{area.name}</span>
-                  <span className="font-mono text-xs text-rosewood-600 font-black">0{idx + 1}</span>
+            {r.areas.map((area, idx) => {
+              // Explicit sequential delay cascade: 1 -> 2 -> 3 -> 4
+              const pillarDelays = ['delay-150', 'delay-300', 'delay-450', 'delay-600'];
+              return (
+                <div 
+                  key={idx} 
+                  data-reveal="text"
+                  className={`${pillarDelays[idx] || 'delay-300'} space-y-1.5 border-l-2 border-earth-900 pl-4`}
+                >
+                  <div className="font-editorial-serif font-black text-sm text-earth-900 flex items-center justify-between">
+                    <span>{area.name}</span>
+                    <span className="font-mono text-xs text-rosewood-600 font-black">0{idx + 1}</span>
+                  </div>
+                  <p className="text-xs text-earth-700 leading-relaxed font-sans">
+                    {area.items}
+                  </p>
                 </div>
-                <p className="text-xs text-earth-700 leading-relaxed font-sans">
-                  {area.items}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
