@@ -248,7 +248,7 @@ export default function Research({ content }) {
                 </div>
                 <div className="mt-2.5 text-center border-t border-earth-200 pt-1">
                   <span className="font-editorial-script text-earth-900 text-base font-bold">
-                    “Official letter of acceptance & presentation schedule”
+                    “Paper's abstract”
                   </span>
                 </div>
               </div>
