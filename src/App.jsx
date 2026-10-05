@@ -8,6 +8,7 @@ import Research from './components/Research';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import EditorialBridge from './components/EditorialBridge';
+import ScrapbookMusicPlayer from './components/ScrapbookMusicPlayer';
 import { content } from './data/content';
 
 export default function App() {
@@ -27,6 +28,9 @@ export default function App() {
 
       {/* 01 — OPENING / COVER (Dedicated first screen based on Page 1 of Template.pdf) */}
       <OpeningCover content={currentContent} onScrollDown={handleScrollToOverview} />
+
+      {/* SCRAPBOOK MUSIC PLAYER INSERT (Between Cover and Overview) */}
+      <ScrapbookMusicPlayer />
 
       {/* 01 — OVERVIEW (Multi-column profile spread based on overview layout.jpg) */}
       <Overview content={currentContent} />
