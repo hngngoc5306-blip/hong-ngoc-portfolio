@@ -277,13 +277,13 @@ export default function Overview({ content }) {
                       return (
                         <span 
                           key={idx} 
-                          className="editorial-tag text-earth-900 bg-white font-mono text-xs sm:text-sm font-bold border border-earth-900 shadow-2xs inline-flex items-center gap-2 py-1 px-2.5"
+                          className="editorial-tag text-earth-900 bg-white font-mono text-xs sm:text-sm font-bold border border-earth-900 shadow-2xs inline-flex items-center gap-2.5 py-1.5 px-3"
                         >
                           {icon && (
                             <img 
                               src={icon} 
                               alt="" 
-                              className="w-4 h-4 object-contain shrink-0" 
+                              className="w-8 h-8 object-contain shrink-0" 
                               loading="lazy"
                             />
                           )}
